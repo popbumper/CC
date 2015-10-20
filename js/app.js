@@ -24,19 +24,17 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-        var viewportScale = 1 / window.devicePixelRatio;
-		$("#viewport").attr("content","user-scalable=no, initial-scale="+viewportScale+", minimum-scale=0.2, maximum-scale=2, width=device-width");
 
-		var fname = document.getElementById("fname").value;
-		var lname = document.getElementById("lname").value;
-		var age = document.getElementById("age").value;
-		var username = document.getElementById("username").value;
-		var password = document.getElementById("psw").value;
+	var fname = document.getElementById("fname").value;
+	var lname = document.getElementById("lname").value;
+	var age = document.getElementById("age").value;
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("psw").value;
 
-		db = window.openDatabase("RegistrationDB", "1.0", "Registration", 200000);
-		if (dbCreated)
-		else
-		db.transaction(populateDB, transaction_error, populateDB_success);
+	db = window.openDatabase("RegistrationDB", "1.0", "Registration", 200000);
+	if (dbCreated)
+	else
+	db.transaction(populateDB, transaction_error, populateDB_success);
 
 
 
