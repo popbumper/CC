@@ -73,6 +73,15 @@ footer ul#menu > li.tab-button.active {
 	background:#fff;
 }
 
+
+.homeContent {
+	width: 98%;
+	margin: auto;
+	background:  transparent url(../img/backcara.jpg) no-repeat center center;
+    	background-size: cover;
+}
+
+
 #search {
 	margin-bottom: 10px;
 }
