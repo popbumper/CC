@@ -1,0 +1,65 @@
+<header>
+		            <ul id="menu">
+		                <li id="home-tab-button" class="tab-button" >Register Policy</li>
+		            </ul>
+</header>
+
+<div class="mainContent">
+ < form action="" name="myForm">
+  < div data-role="content">
+   < div class="fname" data-role="fieldcontain">
+    < label for="fname"> First Name < /label> < input name="fname"
+     id="fname" placeholder="enter first name" value="" data-mini="true" type="text">
+   < /div>
+   < div class="lname" data-role="fieldcontain">
+    < label for="lname"> Last Name < /label> < input name="lname"
+     id="lname" placeholder="enter last name" value="" type="text">
+   < /div>
+   < div class="age" data-role="fieldcontain">
+    < label for="age"> Age < /label> < input name="age" id="age"
+     placeholder="enter age" value="" type="number">
+   < /div>
+   < div class="username" data-role="fieldcontain">
+    < label for="username"> User Name < /label> < input name="username"
+     id="username" placeholder="enter username" value="" type="text">
+   < /div>
+   < div class="psw" data-role="fieldcontain">
+    < label for="psw"> Password < /label> < input name="password" id="psw"
+     placeholder="enter password" value="" type="text">
+   < /div>
+   < input id="register" value="Register" type="button" name="Register" onclick="validationcheck();">
+  < /div>
+  < /form>
+
+
+ < script type="text/javascript">
+  function validationcheck() {
+
+   if (document.myForm.fname.value == "") {
+    alert("Please Enter fname.");
+    document.myForm.fname.focus();
+   } else if (document.myForm.lname.value == "") {
+    alert("Please Enter lname.");
+    document.myForm.lname.focus();
+   } else if (document.myForm.age.value == "") {
+    alert("Please Enter age.");
+    document.myForm.age.focus();
+   } else if (document.myForm.username.value == "") {
+    alert("Please Enter username.");
+    document.myForm.username.focus();
+   }
+   else if (document.myForm.psw.value == "") {
+    alert("Please Enter password");
+    document.myForm.psw.focus();
+   }
+   else
+    {
+      success();
+    }
+  }
+
+  function success(){
+   onDeviceReady();
+  }
+ < /script>
+</div>
