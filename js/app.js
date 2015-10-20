@@ -39,7 +39,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onErr);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -49,16 +48,5 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-    },
-
-    onErr: function(error)
-    {
-        alert('Unable to get your location. Without location you will not be able to use navigate feature! Error:' + '\n' + error.message);
-    },
-
-    onSuccess: function(position)
-    {
-        blogSample.latitude = position.coords.latitude;
-        blogSample.longitude = position.coords.longitude;
     }
 };
