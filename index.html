@@ -25,7 +25,7 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <meta id="viewport" name="viewport" content="" />
 
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
@@ -38,13 +38,20 @@
         <div class="container-fluid" ng-view>
 
         </div>
+
+
+
+
+
          <footer>
 
 		            <ul id="menu">
 		                <li id="home-tab-button" class="tab-button" ><a href="#/home">Home</a></li>
 		                <li id="buy-tab-button" class="tab-button" ><a href="#/register" >Contact</a></li>
 		                <li id="featured-tab-button" class="tab-button" ><a href="#/about" >About</a></li>
-		                <li id="about-tab-button" class="tab-button"><a href="#/about" >Me</a></li>
+		                <li id="about-tab-button" class="tab-button"><a href="#/about" >About</a></li>
+		                <li id="contact-tab-button" class="tab-button"><a href="#/about" >Contact</a></li>
+
 		            </ul>
         </footer>
 
