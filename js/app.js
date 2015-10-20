@@ -61,22 +61,4 @@ var app = {
         blogSample.latitude = position.coords.latitude;
         blogSample.longitude = position.coords.longitude;
     }
-
-
-  function($routeProvider) {
-    $routeProvider.
-      when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'mainController'
-      }).
-      when('/about', {
-        templateUrl: 'views/about.html'
-      }).
-      otherwise({
-        redirectTo: '/'
-      });
-  }]);
-
-
-
 };
