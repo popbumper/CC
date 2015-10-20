@@ -31,6 +31,8 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
          <link rel="stylesheet" type="text/css" href="css/yarp.css" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <title></title>
     </head>
     <body>
@@ -69,6 +71,8 @@
 
         <script type="text/javascript">
             app.initialize();
+            var viewportScale = 1 / window.devicePixelRatio;
+			$("#viewport").attr("content","user-scalable=no, initial-scale="+viewportScale+", minimum-scale=0.2, maximum-scale=2, width=device-width");
         </script>
     </body>
 </html>
