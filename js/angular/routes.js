@@ -1,4 +1,4 @@
-main.config(['$routeProvider',
+blogSample.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
@@ -11,7 +11,6 @@ main.config(['$routeProvider',
       when('/register', {
         templateUrl: 'views/register.html'
       }).
-
 
       otherwise({
         redirectTo: '/'
