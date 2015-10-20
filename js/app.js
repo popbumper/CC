@@ -1,4 +1,4 @@
-var blogSample = angular.module('blogSample', ['ngRoute','ui.bootstrap']);
+var main = angular.module('main', ['ngRoute','ui.bootstrap']);
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -56,9 +56,5 @@ var app = {
         alert('Unable to get your location. Without location you will not be able to use navigate feature! Error:' + '\n' + error.message);
     },
 
-    onSuccess: function(position)
-    {
-        blogSample.latitude = position.coords.latitude;
-        blogSample.longitude = position.coords.longitude;
-    }
+
 };
