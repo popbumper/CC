@@ -21,7 +21,7 @@ var blogSample = angular.module('blogSample', ['ngRoute','ui.bootstrap']);
 var app = {
     // Application Constructor
     initialize: function() {
-        
+
         console.log("initializing");
         this.bindEvents();
         console.log("initializing done");
@@ -31,7 +31,7 @@ var app = {
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);   
+        document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
     //
@@ -61,4 +61,22 @@ var app = {
         blogSample.latitude = position.coords.latitude;
         blogSample.longitude = position.coords.longitude;
     }
+
+
+  function($routeProvider) {
+    $routeProvider.
+      when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'mainController'
+      }).
+      when('/about', {
+        templateUrl: 'views/about.html'
+      }).
+      otherwise({
+        redirectTo: '/'
+      });
+  }]);
+
+
+
 };
