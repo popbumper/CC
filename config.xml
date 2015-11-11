@@ -1,24 +1,22 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.example.hello" version="0.0.1" 	xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Club Care</name>
-    <description>
-        CLub Care app
-    </description>
-    <author email="" href="">
-        Bobby the cat
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "ClubCare App"
+        versionCode = "10" 
+        version     = "1.0.0" >
 
-    <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="1000" />
-    <platform name="android">
-        <icon src="www/img/logo.png" />
-        <splash src="www/img/logo.png" density="mdpi"/>
-        <splash src="www/img/logo.png" density="hdpi"/>
-        <splash src="www/img/logo.png" density="xhdpi"/>
-    </platform>
-   
+    <!-- versionCode is optional and Android only -->
+
+    <name>Club Care</name>
+
+    <description>
+        Club Care App 
+    </description>
+
+    <author href="" email="">
+        Bobby the cat 
+    </author>
+
     <gap:plugin name="cordova-plugin-camera" version="1.2.0"/>
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>    
 
