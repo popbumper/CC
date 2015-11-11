@@ -24,7 +24,6 @@ var app = {
 
         console.log("initializing");
         console.log("initializing done");
-		  navigator.splashscreen.show();
     }
 };
 

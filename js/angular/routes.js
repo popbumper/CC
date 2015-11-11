@@ -11,6 +11,10 @@ blogSample.config(['$routeProvider',
       when('/register', {
         templateUrl: 'views/register.html'
       }).
+      when('/policy', {
+        templateUrl: 'views/policy.html'
+      }).
+
 
       otherwise({
         redirectTo: '/'

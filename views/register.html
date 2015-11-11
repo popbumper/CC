@@ -16,11 +16,34 @@ load_data();
 
 </script>
 <div class="mainContent">
-<input type='text' name="PolicyID" id="PolicyID"/>
- <button onclick="capturePhoto();">Capture Photo</button><br>
+
+
+<br>
+<br>
+
+FirstName:<input type='text' name="firstName" id="firstName"/><br>
+lastName<input type='text' name="lastName" id="lastName"/><br>
+phone<input type='tel' name="phone" id="phone"/><br>
+postcode<input type='text' name="postcode" id="postcode"/><br>
+email<input type='email' name="email" id="email"/><br>
+unitType<input type='text' name="unitType"  id="unitType"/><br>
+insurer<select name="insurer" id="insurer">
+<option value="-1">Select</option>
+<option value="Ageas">Ageas</option>
+<option value="Amtrust">Amtrust</option>
+</select><br>
+policyNumber<input type='text' name="policyNumber"  id="policyNumber"/><br>
+renewalDate<input type='date' name="renewalDate"  id="renewalDate"/><br>
+make<input type='text' name="make" id="make"/><br>
+model<input type='text' name="model" id="model"/><br>
+vin<input type='text' name="vin" id="vin"/>
+
+
+
+<button onclick="capturePhoto();">Capture Photo</button><br>
 <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
 <img id="image" src="" style="display:none;width:100%;">
-<button onclick="save_data()" type="button" value="Save" id="Save" data-theme="a">Save</button>
+<button onclick="savePolicyData()" type="button" value="Save" id="Save" data-theme="a">Save</button>
 <button onclick="sendtestemail()" type="button" value="Save" id="Save" data-theme="a">Email me</button>
 
 

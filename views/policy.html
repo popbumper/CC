@@ -1,0 +1,47 @@
+<header>
+		            <ul id="menu">
+		                <li id="home-tab-button" class="tab-button" >My Policy</li>
+		            </ul>
+</header>
+<script>
+
+
+function load_data() {
+  var input = document.getElementById("PolicyID");
+  input.value = localStorage.getItem("PolicyID");
+}
+
+load_data();
+
+
+</script>
+<div class="mainContent">
+
+<br>
+<br>
+<p>Use this section to record the details off both your caravan and insurance policy.
+This means that in the event of a claim you will have all the information you need,
+right when you need it, and therefore we can help you quickly and easily.
+<br>In order to get the most out of your app, we strongly recommend you complete all of
+the information and take at least two photos of your unit.</p>
+
+<p>The claims section will give you full details of what to do
+in the event  of an incident, or  use the buttons below to complete as many details as
+possible, including taking or attaching
+photographs,
+these will then automatically be
+sent through to our claims team who will then be able to advise you on the correct
+claims procedures to follow.</p>
+
+
+<br>
+<button onclick="location.href = '#/register'">ADD / EDIT</button><br>
+<button onclick="">Report a CLAIM</button><br>
+<button onclick="">Report a THEFT</button><br>
+
+
+
+
+
+
+</div>
