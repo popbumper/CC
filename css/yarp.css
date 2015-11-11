@@ -68,6 +68,7 @@ footer ul#menu > li.tab-button.active {
 
 .mainContent {
 	width: 98%;
+	height:100vh;
 	margin: auto;
 	text-align:center;
 	background:#fff;
