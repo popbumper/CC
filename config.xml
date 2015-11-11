@@ -40,7 +40,7 @@
 	<preference name="ios-statusbarstyle" value="black-opaque" /> <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#004238" />	
-	<preference name="SplashScreen" value="screen" />
+	<preference name="SplashScreen" value="xhdpi" />
 	<preference name="SplashScreenDelay" value="10000" />	
 	
 	<icon src="icon.png" />
