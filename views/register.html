@@ -20,7 +20,7 @@ load_data();
 
 <br>
 <br>
-
+<form>
 FirstName:<input type='text' name="firstName" id="firstName"/><br>
 lastName<input type='text' name="lastName" id="lastName"/><br>
 phone<input type='tel' name="phone" id="phone"/><br>
@@ -37,14 +37,15 @@ renewalDate<input type='date' name="renewalDate"  id="renewalDate"/><br>
 make<input type='text' name="make" id="make"/><br>
 model<input type='text' name="model" id="model"/><br>
 vin<input type='text' name="vin" id="vin"/>
-
-
-
+<button onclick="savePolicyData()" type="button" value="Save" id="Save" data-theme="a">Save</button>
 <button onclick="capturePhoto();">Capture Photo</button><br>
 <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
 <img id="image" src="" style="display:none;width:100%;">
-<button onclick="savePolicyData()" type="button" value="Save" id="Save" data-theme="a">Save</button>
+
 <button onclick="sendtestemail()" type="button" value="Save" id="Save" data-theme="a">Email me</button>
+</form>
+
+
 
 
 
