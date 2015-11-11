@@ -18,34 +18,43 @@ load_data();
 <div class="mainContent">
 
 
-<br>
-<br>
-<form>
-FirstName:<input type='text' name="firstName" id="firstName"/><br>
-lastName<input type='text' name="lastName" id="lastName"/><br>
-phone<input type='tel' name="phone" id="phone"/><br>
-postcode<input type='text' name="postcode" id="postcode"/><br>
-email<input type='email' name="email" id="email"/><br>
-unitType<input type='text' name="unitType"  id="unitType"/><br>
-insurer<select name="insurer" id="insurer">
-<option value="-1">Select</option>
-<option value="Ageas">Ageas</option>
-<option value="Amtrust">Amtrust</option>
-</select><br>
-policyNumber<input type='text' name="policyNumber"  id="policyNumber"/><br>
-renewalDate<input type='date' name="renewalDate"  id="renewalDate"/><br>
-make<input type='text' name="make" id="make"/><br>
-model<input type='text' name="model" id="model"/><br>
-vin<input type='text' name="vin" id="vin"/>
-<button onclick="savePolicyData()" type="button" value="Save" id="Save" data-theme="a">Save</button>
-<button onclick="capturePhoto();">Capture Photo</button><br>
-<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
-<img id="image" src="" style="display:none;width:100%;">
 
-<button onclick="sendtestemail()" type="button" value="Save" id="Save" data-theme="a">Email me</button>
+
+<form id="contact-form" action="/" method="post">
+  <div>
+    <label>
+      <span>Name: (required)</span>
+      <input placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Email: (required)</span>
+      <input placeholder="Please enter your email address" type="email" tabindex="2" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Telephone: (required)</span>
+      <input placeholder="Please enter your number" type="tel" tabindex="3" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Website: (required)</span>
+      <input placeholder="Begin with http://" type="url" tabindex="4" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Message: (required)</span>
+      <textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
+    </label>
+  </div>
+  <div>
+    <button name="submit" type="submit" id="contact-submit">Send Email</button>
+  </div>
 </form>
-
-
 
 
 
