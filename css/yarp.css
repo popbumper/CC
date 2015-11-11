@@ -53,12 +53,12 @@ footer ul#menu {
 footer ul#menu > li.tab-button {
 	display: block;
 	width: 25%;
-	padding: 20px 0;
+	padding: 4px 0;
 	float: left;
 	text-align: center;
 	cursor: pointer;
-	color:#fff;
-	background:#808080;
+	color:#000;
+	background:#ffffff;
 }
 footer ul#menu > li.tab-button.active {
 	font-weight: bold;
@@ -78,7 +78,7 @@ footer ul#menu > li.tab-button.active {
 .homeContent {
 	width: 100%;
 	margin: auto;
-	height:90vh;
+	height:92vh;
 	background:  transparent url(../img/backcara.jpg) no-repeat center center;
     	background-size: cover;
 }
