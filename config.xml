@@ -19,8 +19,8 @@
         <splash src="www/img/logo.png" density="xhdpi"/>
     </platform>
    
-    <gap:plugin name="cordova-plugin-camera" version="1.2.0" />
-    <gap:plugin name="com.phonegap.plugins.barcodescanner" />    
+    <gap:plugin name="cordova-plugin-camera" version="1.2.0"/>
+    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>    
 
 
 </widget>
