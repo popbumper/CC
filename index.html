@@ -11,13 +11,10 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-         <link rel="stylesheet" type="text/css" href="css/yarp.css" />
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <title>Mike 2016</title>
- <script type="text/javascript" charset="utf-8">
-
-    </script>
+        <link rel="stylesheet" type="text/css" href="css/yarp.css" />
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <title>Club Care Insurance</title>
+		<script type="text/javascript" charset="utf-8"></script>
    </head>
     <body>
 
@@ -50,16 +47,41 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/angular/routes.js"></script>
 <script type="text/javascript" src="js/angular/controller.js"></script>
-
+<script type="text/javascript" src='js/rhaboo.min.js'></script>
 
 <script>
 
 function save_data() {
 alert("save");
-	var input = document.getElementById("PolicyID");
-	localStorage.setItem("PolicyID", input.value);
-	var PolicyID = localStorage.getItem("PolicyID");
+var store = Rhaboo.persistent('policy');
+store.write('firstName', document.getElementById("firstName").value);
+
+
 }
+
+
+
+
+
+function savePolicyData() {
+alert("save");
+	localStorage.setItem("firstName", document.getElementById("firstName").value);
+	localStorage.setItem("lastName", document.getElementById("lastName").value);
+	localStorage.setItem("phone", document.getElementById("phone").value);
+	localStorage.setItem("postcode", document.getElementById("postcode").value);
+	localStorage.setItem("email", document.getElementById("email").value);
+	localStorage.setItem("unitType", document.getElementById("unitType").value);
+	localStorage.setItem("insurer", document.getElementById("insurer").value);
+	localStorage.setItem("policyNumber", document.getElementById("policyNumber").value);
+	localStorage.setItem("renewalDate", document.getElementById("renewalDate").value);
+	localStorage.setItem("make", document.getElementById("make").value);
+	localStorage.setItem("model", document.getElementById("model").value);
+	localStorage.setItem("vin", document.getElementById("vin").value);
+
+
+
+}
+
 
 
 var pictureSource; // picture source
