@@ -3,10 +3,26 @@
 		                <li id="home-tab-button" class="tab-button" >Register Policy</li>
 		            </ul>
 </header>
+<script>
 
+
+function load_data() {
+  var input = document.getElementById("PolicyID");
+  input.value = localStorage.getItem("PolicyID");
+}
+
+load_data();
+
+
+</script>
 <div class="mainContent">
+<input type='text' name="PolicyID" id="PolicyID"/>
+
+<button onclick="save_data()" type="button" value="Save" id="Save" data-theme="a">Save</button>
 
 
-<input class='search-key' type="text"/>
-<ul class='employee-list'></ul>
+
+
+
+
 </div>
