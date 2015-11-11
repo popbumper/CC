@@ -5,61 +5,57 @@
 </header>
 
 <div class="mainContent">
- <form action="" name="myForm">
-  <div data-role="content">
-   <div class="fname" data-role="fieldcontain">
-    <label for="fname"> First Name </label> <input name="fname"
-     id="fname" placeholder="enter first name" value="" data-mini="true" type="text">
-   </div>
-   <div class="lname" data-role="fieldcontain">
-    <label for="lname"> Last Name </label> <input name="lname"
-     id="lname" placeholder="enter last name" value="" type="text">
-   </div>
-   <div class="age" data-role="fieldcontain">
-    <label for="age"> Age </label> <input name="age" id="age"
-     placeholder="enter age" value="" type="number">
-   </div>
-   <div class="username" data-role="fieldcontain">
-    <label for="username"> User Name </label> <input name="username"
-     id="username" placeholder="enter username" value="" type="text">
-   </div>
-   <div class="psw" data-role="fieldcontain">
-    <label for="psw"> Password </label> <input name="password" id="psw"
-     placeholder="enter password" value="" type="text">
-   </div>
-   <input id="register" value="Register" type="button" name="Register" onclick="validationcheck();">
-  </div>
-  </form>
 
 
- <script type="text/javascript">
-  function validationcheck() {
 
-   if (document.myForm.fname.value == "") {
-    alert("Please Enter fname.");
-    document.myForm.fname.focus();
-   } else if (document.myForm.lname.value == "") {
-    alert("Please Enter lname.");
-    document.myForm.lname.focus();
-   } else if (document.myForm.age.value == "") {
-    alert("Please Enter age.");
-    document.myForm.age.focus();
-   } else if (document.myForm.username.value == "") {
-    alert("Please Enter username.");
-    document.myForm.username.focus();
-   }
-   else if (document.myForm.psw.value == "") {
-    alert("Please Enter password");
-    document.myForm.psw.focus();
-   }
-   else
-    {
-      success();
+<script>
+
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+        db.transaction(populateDB, errorCB, successCB);
     }
-  }
 
-  function success(){
-   onDeviceReady();
-  }
- </script>
+    // Populate the database
+    //
+    function populateDB(tx) {
+         tx.executeSql('DROP TABLE IF EXISTS DEMO');
+         tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+         tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+         tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+    }
+
+    // Transaction error callback
+    //
+    function errorCB(err) {
+        alert("Error processing SQL: "+err);
+    }
+
+    // Transaction success callback
+    //
+    function successCB() {
+        alert("success!");
+    }
+
+
+
+
+</script>
+
+    <input type="text" id="new_item">
+  <button onclick="add_item()">
+  Add
+  </button>
+  <ul id="todo_list">
+  </ul>
+    <br/>
+  <button id="clearStorage">Clear storage</button>
+
+
 </div>
