@@ -14,6 +14,9 @@ blogSample.config(['$routeProvider',
       when('/policy', {
         templateUrl: 'views/policy.html'
       }).
+      when('/repairer', {
+        templateUrl: 'views/repairer.html'
+      }).
 
 
       otherwise({
