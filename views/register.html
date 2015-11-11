@@ -7,8 +7,11 @@
 
 
 function load_data() {
-  var input = document.getElementById("PolicyID");
-  input.value = localStorage.getItem("PolicyID");
+
+
+
+  	$("firstName").value = localStorage.getItem("firstName");
+
 }
 
 load_data();
@@ -23,39 +26,83 @@ load_data();
 <form id="contact-form" action="/" method="post">
   <div>
     <label>
-      <span>Name: (required)</span>
-      <input placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
+      <span>First Name: (required)</span>
+      <input placeholder="Please enter your first name" id="firstName" type="text" tabindex="1" required autofocus>
     </label>
   </div>
   <div>
     <label>
-      <span>Email: (required)</span>
-      <input placeholder="Please enter your email address" type="email" tabindex="2" required>
+      <span>Last Name: (required)</span>
+      <input placeholder="Please enter your last name" id="lastName" type="text" tabindex="2" required>
     </label>
   </div>
   <div>
     <label>
       <span>Telephone: (required)</span>
-      <input placeholder="Please enter your number" type="tel" tabindex="3" required>
+      <input placeholder="Please enter your number" id="phone" type="tel" tabindex="3" required>
     </label>
   </div>
   <div>
     <label>
-      <span>Website: (required)</span>
-      <input placeholder="Begin with http://" type="url" tabindex="4" required>
+      <span>Postcode: (required)</span>
+      <input placeholder="Please enter your post code" id="postcode" type="text" tabindex="4" required>
     </label>
   </div>
   <div>
     <label>
-      <span>Message: (required)</span>
-      <textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
+      <span>Email: (required)</span>
+      <input placeholder="Please enter your email address" id="email" type="email" tabindex="5" required>
     </label>
   </div>
   <div>
-    <button name="submit" type="submit" id="contact-submit">Send Email</button>
+    <label>
+      <span>Unit Type: (required)</span>
+      <input placeholder="Please enter your unit type" id="unitType" type="email" tabindex="6" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Insurer: (required)</span>
+      <select name="insurer" id="insurer">
+	  <option value="-1">Select</option>
+	  <option value="Ageas">Ageas</option>
+	  <option value="Amtrust">Amtrust</option>
+		</select>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Policy Number: (required)</span>
+      <input placeholder="Please enter your policyNumber" id="policyNumber" type="email" tabindex="7" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Renewal Date: (required)</span>
+      <input placeholder="Please enter your renewal date" id="renewalDate" type="date" tabindex="8" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Make: (required)</span>
+      <input placeholder="Please enter your caravan make" id="make" type="text" tabindex="9" required>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>vin: (required)</span>
+      <input placeholder="Please enter your caravan vin" id="vin" type="text" tabindex="10" required>
+    </label>
+  </div>
+
+
+  <div>
+    <button onclick="savePolicyData()" type="button" value="Save" id="Save" data-theme="a">Save</button>
+    <button onclick="capturePhoto();">Capture Photo</button><br>
+	<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+	<img id="image" src="" style="display:none;width:100%;">
   </div>
 </form>
-
 
 
 
