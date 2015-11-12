@@ -22,8 +22,24 @@ clubCare.config(['$routeProvider',
       when('/repairer', {
         templateUrl: 'views/repairer.html'
       }).
-
-
+      when('/hints', {
+        templateUrl: 'views/hints.html'
+      }).
+      when('/share', {
+        templateUrl: 'views/share.html'
+      }).
+      when('/products', {
+        templateUrl: 'views/products.html'
+      }).
+      when('/claim', {
+        templateUrl: 'views/claim.html'
+      }).
+      when('/contact', {
+        templateUrl: 'views/contact.html'
+      }).
+      when('/more', {
+        templateUrl: 'views/more.html'
+      }).
       otherwise({
         redirectTo: '/'
       });
