@@ -111,6 +111,7 @@ body {
 	background:#fff;
 	font-family:  sans-serif;
 	text-transform: none;
+	line-height:1;
 }
 body .ui-page {
 	padding-top:10px;
