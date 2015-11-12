@@ -16,12 +16,13 @@
     <author href="" email="">
         Bobby the cat 
     </author>
-	 <gap:plugin name="org.apache.cordova.inappbrowser" />
-	<gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="cordova-plugin-camera" version="1.2.0"/>
-    <gap:plugin name="com.phonegap.plugins.barcodescanner"/>    
-    <gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
-    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+    
+    
+	<gap:plugin name="org.apache.cordova.inappbrowser"/>
+	<gap:plugin name="cordova-plugin-camera" version="1.2.0"/>
+	<gap:plugin name="com.phonegap.plugins.barcodescanner"/>    
+	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
+	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
@@ -42,40 +43,12 @@
 	<preference name="ios-statusbarstyle" value="black-opaque" /> <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#004238" />	
-	<preference name="SplashScreen" value="xhdpi" />
-	<preference name="SplashScreenDelay" value="10000" />	
+
 	
 	<icon src="icon.png" />
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
 	
 	
-
-<platform name="android">
-    <!-- you can use any density that exists in the Android project -->
-    <splash src="splash/xhdpi.png" density="land-hdpi"/>
-    <splash src="splash/xhdpi.png" density="land-ldpi"/>
-    <splash src="splash/xhdpi.png" density="land-mdpi"/>
-    <splash src="splash/xhdpi.png" density="land-xhdpi"/>
-    <splash src="splash/xhdpi.png" density="port-hdpi"/>
-    <splash src="splash/xhdpi.png" density="port-ldpi"/>
-    <splash src="splash/xhdpi.png" density="port-mdpi"/>
-    <splash src="splash/xhdpi.png" density="port-xhdpi"/>
-</platform>
-
-<platform name="ios">
-    <!-- images are determined by width and height. The following are supported -->
-    <splash src="splash/xhdpi.png" width="320" height="480"/>
-    <splash src="splash/xhdpi.png" width="640" height="960"/>
-    <splash src="splash/xhdpi.png" width="768" height="1024"/>
-    <splash src="splash/xhdpi.png" width="1536" height="2048"/>
-    <splash src="splash/xhdpi.png" width="1024" height="768"/>
-    <splash src="splash/xhdpi.png" width="2048" height="1536"/>
-    <splash src="splash/xhdpi.png" width="640" height="1136"/>
-    <splash src="splash/xhdpi.png" width="750" height="1334"/>
-    <splash src="splash/xhdpi.png" width="1242" height="2208"/>
-    <splash src="splash/xhdpi.png" width="2208" height="1242"/>
-</platform>
-
   <access origin="http://www.clubcareinsurance.com" subdomains="true" />
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->

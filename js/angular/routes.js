@@ -1,9 +1,14 @@
-blogSample.config(['$routeProvider',
+
+clubCare.config(['$routeProvider',
   function($routeProvider) {
-    $routeProvider.
+
+ $routeProvider.
       when('/', {
         templateUrl: 'views/main.html',
         controller: 'mainController'
+      }).
+      when('/intro', {
+        templateUrl: 'views/intro.html'
       }).
       when('/about', {
         templateUrl: 'views/about.html'

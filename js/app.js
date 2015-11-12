@@ -1,4 +1,4 @@
-var blogSample = angular.module('blogSample', ['ngRoute','ui.bootstrap']);
+var clubCare = angular.module('clubCare', ['ngRoute','ui.bootstrap']);
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one

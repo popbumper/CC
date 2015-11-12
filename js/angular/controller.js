@@ -1,7 +1,7 @@
-blogSample.controller('mainController', function($scope, $route){
-  
-    $scope.latitude = blogSample.latitude;
-    $scope.longitude = blogSample.longitude;
-                      
+clubCare.controller('mainController', function($scope, $route){
+
+    $scope.latitude = clubCare.latitude;
+    $scope.longitude = clubCare.longitude;
+
 });
 
