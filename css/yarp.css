@@ -84,6 +84,17 @@ footer ul#menu > li.tab-button.active {
 }
 
 
+.intro {
+	text-align:center;
+	padding: 8%;
+	margin-top: 0%;
+	height:92vh;
+	font-family:"Open Sans", Helvetica, Arial;
+
+
+
+}
+
 #search {
 	margin-bottom: 10px;
 }
@@ -96,6 +107,7 @@ footer ul#menu > li.tab-button.active {
 
 
 body {
+	background:#fff;
 	font-family:  sans-serif;
 }
 body .ui-page {
