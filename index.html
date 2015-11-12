@@ -2,6 +2,19 @@
 
 <html ng-app="clubCare">
     <head>
+ <script type="text/javascript" src='js/rhaboo.min.js'></script>
+    <script>
+    var store = Rhaboo.persistent('config');
+
+	if(store.introSkip == 'yes'){
+	 window.location.href = '#/home'
+	}
+	else
+	{
+	 window.location.href = '#/intro'
+	};
+
+    </script>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
@@ -48,7 +61,7 @@
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/angular/routes.js"></script>
 <script type="text/javascript" src="js/angular/controller.js"></script>
-<script type="text/javascript" src='js/rhaboo.min.js'></script>
+
 
 <script>
 
@@ -60,15 +73,6 @@ store.write('firstName', document.getElementById("firstName").value);
 
 }
 
-var store = Rhaboo.persistent('config');
-
-if(store.introSkip == 'yes'){
- window.location.href = '#/home'
-}
-else
-{
- window.location.href = '#/intro'
-};
 
 
 function savePolicyData() {
