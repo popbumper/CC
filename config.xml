@@ -20,7 +20,9 @@
 	<gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="cordova-plugin-camera" version="1.2.0"/>
     <gap:plugin name="com.phonegap.plugins.barcodescanner"/>    
-    <gap:plugin name="de.appplant.cordova.plugin.email-composer"/>	
+    <gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
 	<preference name="orientation"      value="default" />
