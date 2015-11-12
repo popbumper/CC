@@ -38,10 +38,6 @@ header ul#menu > li.tab-button.active {
 }
 
 
-
-
-
-
 footer ul#menu {
 	list-style: none;
 	width: 100%;
@@ -57,13 +53,18 @@ footer ul#menu > li.tab-button {
 	float: left;
 	text-align: center;
 	cursor: pointer;
-	color:#000;
+	color:#0066ff;
 	background:#ffffff;
 }
 footer ul#menu > li.tab-button.active {
 	font-weight: bold;
 	cursor: default;
+	color:#666666;
 }
+
+
+
+
 
 
 .mainContent {
@@ -119,8 +120,13 @@ footer {
 	position: fixed;
 	bottom:0;
 	width:100%;
-
+	background: #fff;
 }
+
+
+
+
+
 .project {
 	margin-bottom:20px;
 	padding: 10px;
@@ -187,3 +193,4 @@ border-color: #5f779d;
 .btn:hover, .btn:focus {
 outline: none;
 }
+

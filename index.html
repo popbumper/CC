@@ -7,7 +7,6 @@
     var store = Rhaboo.persistent('config');
 
 	if(store.introSkip == 'yes'){
-	 window.location.href = '#/home'
 	}
 	else
 	{
@@ -39,20 +38,38 @@
 
 
 
+<style>
+a {
+text-decoration: none;
+color:#666666;
 
+}
 
-         <footer>
+a:link {
+text-decoration: none;
+color:#666666;
 
-		            <ul id="menu">
-		                <li id="home-tab-button" class="tab-button" style="font-size:8px"><a href="#/home"><i class="fa fa-home"  style="font-size:32px"></i><br>Home</a></li>
-		                <li id="buy-tab-button" class="tab-button" style="font-size:8px"><a href="#/register" ><i class="fa fa-phone"  style="font-size:32px"></i><br>Contact</a></li>
-		                <li id="featured-tab-button" class="tab-button" style="font-size:8px"><a href="#/about" ><i class="fa fa-info-circle"  style="font-size:32px"></i><br>About</a></li>
-		                <li id="about-tab-button" class="tab-button" style="font-size:8px"><a href="#/about" ><i class="fa fa-ellipsis-h"  style="font-size:32px"></i><br>More</a></li>
+}
 
+a:hover {
+color:#0066ff;
+}
 
+a:active {
+color:#0066ff;
+text-decoration: none;
 
-		            </ul>
-        </footer>
+}
+</style>
+
+<footer>
+	<ul id="menu">
+		<li id="home-tab-button" class="tab-button" style="font-size:8px" ><a href="#/home" ><i class="fa fa-home"  style="font-size:32px"></i><br>Home</a></li>
+		<li id="buy-tab-button" class="tab-button" style="font-size:8px"><a href="#/register" ><i class="fa fa-phone"  style="font-size:32px"></i><br>Contact</a></li>
+		<li id="featured-tab-button" class="tab-button" style="font-size:8px"><a href="#/about" ><i class="fa fa-info-circle"  style="font-size:32px"></i><br>About</a></li>
+		<li id="about-tab-button" class="tab-button" style="font-size:8px"><a href="#/about" ><i class="fa fa-ellipsis-h"  style="font-size:32px"></i><br>More</a></li>
+	</ul>
+</footer>
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/libs/jquery-1.11.2.min.js"></script>
