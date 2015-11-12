@@ -82,6 +82,7 @@ footer ul#menu > li.tab-button.active {
 	height:92vh;
 	background:  transparent url(../img/backcara.jpg) no-repeat center center;
     	background-size: cover;
+    	overflow: hidden;
 }
 
 
