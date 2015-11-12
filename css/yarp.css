@@ -109,6 +109,7 @@ footer ul#menu > li.tab-button.active {
 body {
 	background:#fff;
 	font-family:  sans-serif;
+	text-transform: none;
 }
 body .ui-page {
 	padding-top:10px;
