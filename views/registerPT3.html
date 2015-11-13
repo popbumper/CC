@@ -40,10 +40,35 @@ function onDeviceReady() {
 
 // Called when a photo is successfully retrieved
 //
-function onPhotoDataSuccess(imageID, imageURI) {
+function onPhotoDataSuccess(imageURI) {
 	capturedPhoto ++;
-	store.write('photo'+capturedPhoto, imageURI);
-	document.getElementById("image"+capturedPhoto).src = store.photo + capturedPhoto
+
+
+	if(capturedPhoto == 1){
+	store.write('photo1', imageURI);
+	document.getElementById("image1").src = store.photo1
+	}
+	else if(capturedPhoto == 2){
+	store.write('photo2', imageURI);
+	document.getElementById("image2").src = store.photo2
+	}
+	else if(capturedPhoto == 3){
+	store.write('photo3', imageURI);
+	document.getElementById("image3").src = store.photo3
+
+	}
+	else if(capturedPhoto == 4){
+	store.write('photo4', imageURI);
+	document.getElementById("image4").src = store.photo4
+	}
+	else if(capturedPhoto == 5){
+	store.write('photo5', imageURI);
+	document.getElementById("image5").src = store.photo5
+	}
+	else if(capturedPhoto == 6){
+	store.write('photo6', imageURI);
+	document.getElementById("image6").src = store.photo6
+	}
 }
 
 // Called when a photo is successfully retrieved
