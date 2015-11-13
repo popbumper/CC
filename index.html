@@ -20,8 +20,8 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta id="viewport" name="viewport" content="" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
@@ -85,36 +85,13 @@ text-decoration: none;
 
 <script>
 
-function save_data() {
-alert("save");
-var store = Rhaboo.persistent('policy');
-store.write('firstName', document.getElementById("firstName").value);
-
-
-}
-
-
-
-function savePolicyData() {
-alert("save");
-	localStorage.setItem("firstName", document.getElementById("firstName").value);
-	localStorage.setItem("lastName", document.getElementById("lastName").value);
-	localStorage.setItem("phone", document.getElementById("phone").value);
-	localStorage.setItem("postcode", document.getElementById("postcode").value);
-	localStorage.setItem("email", document.getElementById("email").value);
-	localStorage.setItem("unitType", document.getElementById("unitType").value);
-	localStorage.setItem("insurer", document.getElementById("insurer").value);
-	localStorage.setItem("policyNumber", document.getElementById("policyNumber").value);
-	localStorage.setItem("renewalDate", document.getElementById("renewalDate").value);
-	localStorage.setItem("make", document.getElementById("make").value);
-	localStorage.setItem("model", document.getElementById("model").value);
-	localStorage.setItem("vin", document.getElementById("vin").value);
-
-
-
-}
-
-
+window.addEventListener("resize", function(){
+  if(document.activeElement.tagName=="INPUT"){
+     window.setTimeout(function(){
+        document.activeElement.scrollIntoViewIfNeeded();
+     },0);
+  }
+})
 
 var pictureSource; // picture source
 var destinationType; // sets the format of returned value
