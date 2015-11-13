@@ -59,23 +59,24 @@ function onPhotoURISuccess(imageURI) {
 
 function capturePhoto() {
 	navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
-	quality: 30,
+	quality: 50,
 	targetWidth: 600,
 	targetHeight: 600,
 	destinationType: destinationType.FILE_URI,
-	saveToPhotoAlbum: true
-
+	saveToPhotoAlbum: true,
+	correctOrientation: true
 	});
 }
 
 function getPhoto(source) {
 // Retrieve image file location from specified source
 	navigator.camera.getPicture(onPhotoURISuccess, onFail, {
-	quality: 30,
+	quality: 50,
 	targetWidth: 600,
 	targetHeight: 600,
 	destinationType: destinationType.FILE_URI,
-	sourceType: source
+	sourceType: source,
+	correctOrientation: true
 	});
 }
 
@@ -118,8 +119,8 @@ function onFail(message) {
       <input  id="vin" type="text" tabindex="10" size="20">
     </label>
   </div>
-	Photo 1:<img id="image1" src="" style="display:block;width:10%;"><button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
-	Photo 2:<img id="image2" src="" style="display:none;width:10%;"> <button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
+	Photo 1:<img id="image1" src="" style="display:block;width:40%;"><button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
+	Photo 2:<img id="image2" src="" style="display:none;width:40%;"> <button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
 
 
 
