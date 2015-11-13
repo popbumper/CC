@@ -19,7 +19,7 @@ if(store.firstName != undefined){
 	document.getElementById("model").value = store.model
 	document.getElementById("vin").value = store.vin
     document.getElementById("image1").src = store.photo1
-
+	document.getElementById("image2").src = store.photo2
 }
 
 
@@ -39,9 +39,9 @@ function onDeviceReady() {
 
 // Called when a photo is successfully retrieved
 //
-function onPhotoDataSuccess(imageURI) {
+function onPhotoDataSuccess(imageID, imageURI) {
 	console.log(imageURI);
-	store.write('photo1', imageURI);
+	store.write(imageID, imageURI);
 	var cameraImage = document.getElementById('image');
 	cameraImage.style.display = 'block';
 	cameraImage.src = imageURI;
@@ -57,8 +57,8 @@ function onPhotoURISuccess(imageURI) {
 }
 
 
-function capturePhoto() {
-	navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
+function capturePhoto(imageID) {
+	navigator.camera.getPicture(onPhotoDataSuccess(imageID), onFail, {
 	quality: 50,
 	targetWidth: 600,
 	targetHeight: 600,
@@ -119,8 +119,8 @@ function onFail(message) {
       <input  id="vin" type="text" tabindex="10" size="20">
     </label>
   </div>
-	Photo 1:<img id="image1" src="" style="display:block;width:40%;"><button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
-	Photo 2:<img id="image2" src="" style="display:none;width:40%;"> <button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
+	Photo 1:<img id="image1" src="" style="display:block;height:25%;"><button class="btn btn-warning" onclick="capturePhoto(photo1);">Capture Photo</button><br>
+	Photo 2:<img id="image2" src="" style="display:block;height:25%;"> <button class="btn btn-warning" onclick="capturePhoto(photo2);">Capture Photo</button><br>
 
 
 
