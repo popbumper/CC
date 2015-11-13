@@ -34,17 +34,16 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 	pictureSource = navigator.camera.PictureSourceType;
 	destinationType = navigator.camera.DestinationType;
+
 }
 
 
 // Called when a photo is successfully retrieved
 //
 function onPhotoDataSuccess(imageID, imageURI) {
-	console.log(imageURI);
-	store.write(imageID, imageURI);
-	var cameraImage = document.getElementById('image');
-	cameraImage.style.display = 'block';
-	cameraImage.src = imageURI;
+	capturedPhoto ++;
+	store.write('photo'+[capturedPhoto], imageURI);
+	document.getElementById("image"+capturedPhoto).src = store.photo + capturedPhoto
 }
 
 // Called when a photo is successfully retrieved
@@ -58,7 +57,7 @@ function onPhotoURISuccess(imageURI) {
 
 
 function capturePhoto(imageID) {
-	navigator.camera.getPicture(onPhotoDataSuccess(imageID), onFail, {
+	navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
 	quality: 50,
 	targetWidth: 600,
 	targetHeight: 600,
@@ -119,9 +118,9 @@ function onFail(message) {
       <input  id="vin" type="text" tabindex="10" size="20">
     </label>
   </div>
-	Photo 1:<img id="image1" src="" style="display:block;width:5%;"><button class="btn btn-warning" onclick="capturePhoto(photo1);">Capture Photo</button><br>
-	Photo 2:<img id="image2" src="" style="display:block;width:5%;"> <button class="btn btn-warning" onclick="capturePhoto(photo2);">Capture Photo</button><br>
-
+	Photo 1:<img id="image1" src="" style="display:block;width:5%;">
+	Photo 2:<img id="image2" src="" style="display:block;width:5%;"><br>
+	<button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button>
 
 
 
