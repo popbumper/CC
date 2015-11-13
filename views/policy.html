@@ -1,21 +1,9 @@
-<header>
-		            <ul id="menu">
-		                 <li id="home-tab-button" class="tab-button"><i class="fa fa-user fa-lg" style="font-size:28px;"></i><span style="font-size:18px; padding-left:3%;  font-weight: lighter;">My Policy</span></li>
-		            </ul>
-</header>
-<script>
-
-
-function load_data() {
-  var input = document.getElementById("PolicyID");
-  input.value = localStorage.getItem("PolicyID");
-}
-
-load_data();
-
-
-</script>
-<div class="mainContent">
+<div class="homeContent">
+<img class="homelogo_test" src="img/mainLogo.jpg" />
+<div class="pageTitle"><i class="fa fa-user fa-lg" style="font-size:38px; padding-bottom:5px;"></i><br><span style="font-size:22px; padding-left:3%;  font-weight: lighter;">My Policy</span>&nbsp;&nbsp;</div>
+<div class="pageBanner">Recording Your Policy Details</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
 
 <br>
 <br>
@@ -34,14 +22,14 @@ sent through to our claims team who will then be able to advise you on the corre
 claims procedures to follow.</p>
 
 
-<br>
-<button onclick="location.href = '#/register'">ADD / EDIT</button><br>
-<button onclick="">Report a CLAIM</button><br>
-<button onclick="">Report a THEFT</button><br>
+<center>
+<b>My Caravan Policy</b> <a class="btn btn-success" href="#/register">Add/Edit</a><br>
+<a class="btn btn-warning" href="#/">Report a CLAIM</a>&nbsp;&nbsp;
+<a class="btn btn-warning" href="#/">Report a THEFT</a>
 
 
 
 
-
+</div>
 
 </div>
