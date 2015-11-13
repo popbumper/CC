@@ -24,7 +24,7 @@
 	<gap:plugin name="com.phonegap.plugins.barcodescanner"/>    
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
-	<gap:plugin name="cordova.plugins.Keyboard"/>
+	<gap:plugin name="com.ionic.keyboard"/>
 
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
