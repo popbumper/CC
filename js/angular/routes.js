@@ -16,6 +16,12 @@ clubCare.config(['$routeProvider',
       when('/register', {
         templateUrl: 'views/register.html'
       }).
+      when('/registerPT2', {
+        templateUrl: 'views/registerPT2.html'
+      }).
+      when('/registerPT3', {
+        templateUrl: 'views/registerPT3.html'
+      }).
       when('/policy', {
         templateUrl: 'views/policy.html'
       }).

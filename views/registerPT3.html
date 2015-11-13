@@ -1,0 +1,134 @@
+<script>
+var store = Rhaboo.persistent('policy');
+function savePolicyDetails(){
+
+	var submitted_make = document.getElementById("make").value;
+	var submitted_model = document.getElementById("model").value;
+	var submitted_vin = document.getElementById("vin").value;
+
+	store.write('make', submitted_make);
+	store.write('model', submitted_model);
+	store.write('vin', submitted_vin);
+
+
+	window.location.href = '#/policy';
+
+}
+
+if(store.firstName != undefined){
+	document.getElementById("make").value = store.make
+	document.getElementById("model").value = store.model
+	document.getElementById("vin").value = store.vin
+}
+
+
+
+var pictureSource; // picture source
+var destinationType; // sets the format of returned value
+
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+
+function onDeviceReady() {
+	pictureSource = navigator.camera.PictureSourceType;
+	destinationType = navigator.camera.DestinationType;
+}
+
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoDataSuccess(imageURI) {
+	console.log(imageURI);
+	var cameraImage = document.getElementById('image');
+	cameraImage.style.display = 'block';
+	cameraImage.src = imageURI;
+}
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoURISuccess(imageURI) {
+	console.log(imageURI);
+	var galleryImage = document.getElementById('image');
+	galleryImage.style.display = 'block';
+	galleryImage.src = imageURI;
+}
+
+
+function capturePhoto() {
+	navigator.camera.getPicture(onPhotoDataSuccess, onFail, {
+	quality: 30,
+	targetWidth: 600,
+	targetHeight: 600,
+	destinationType: destinationType.FILE_URI,
+	saveToPhotoAlbum: true
+	});
+}
+
+function getPhoto(source) {
+// Retrieve image file location from specified source
+	navigator.camera.getPicture(onPhotoURISuccess, onFail, {
+	quality: 30,
+	targetWidth: 600,
+	targetHeight: 600,
+	destinationType: destinationType.FILE_URI,
+	sourceType: source
+	});
+}
+
+function onFail(message) {
+//alert('Failed because: ' + message);
+}
+
+
+
+
+
+</script>
+
+
+
+
+<div class="homeContent">
+<img class="homelogo_test" src="img/mainLogo.jpg" />
+<div class="pageTitle"><i class="fa fa-user fa-lg" style="font-size:38px; padding-bottom:5px;"></i><br><span style="font-size:22px; padding-left:3%;  font-weight: lighter;">Register Policy</span>&nbsp;&nbsp;</div>
+<div class="pageBanner">Step 3: Your Caravan Details</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+<form id="contact-form"  onSubmit="return savePolicyDetails()" method="post" data-ajax="false">
+<div>
+    <label>
+      <span>Make:</span>
+      <input  id="make" type="text" tabindex="9" size="20">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Model:</span>
+      <input  id="model" type="text" tabindex="9" size="20">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>VIN:</span>
+      <input  id="vin" type="text" tabindex="10" size="20">
+    </label>
+  </div>
+	Photo 1:<img id="image1" src="" style="display:none;width:10%;"><button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
+	Photo 2:<img id="image2" src="" style="display:none;width:10%;"> <button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
+
+
+
+
+  <div style="text-align:right;">
+
+    <button class="btn btn-success" onclick="submit()" type="submit" value="Save" id="Continue" data-theme="a">Finish</button>
+
+  </div>
+</form>
+
+
+</div>
+
+</div>

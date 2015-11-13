@@ -1,0 +1,148 @@
+<script>
+ var store = Rhaboo.persistent('policy');
+function savePolicyDetails(){
+
+var submitted_firstName = document.getElementById("firstName").value;
+var submitted_lastName = document.getElementById("lastName").value;
+var submitted_phone = document.getElementById("phone").value;
+var submitted_postcode = document.getElementById("postcode").value;
+var submitted_email = document.getElementById("email").value;
+var submitted_unitType = document.getElementById("unitType").value;
+var submitted_insurer = document.getElementById("insurer").value;
+var submitted_policyNumber = document.getElementById("policyNumber").value;
+var submitted_renewalDate = document.getElementById("renewalDate").value;
+var submitted_make = document.getElementById("make").value;
+var submitted_model = document.getElementById("model").value;
+var submitted_vin = document.getElementById("vin").value;
+
+store.write('firstName', submitted_firstName);
+store.write('lastName', submitted_lastName);
+store.write('phone', submitted_phone);
+store.write('postcode', submitted_postcode);
+store.write('email', submitted_email);
+store.write('unitType', submitted_unitType);
+store.write('insurer', submitted_insurer);
+store.write('policyNumber', submitted_policyNumber);
+store.write('renewalDate', submitted_renewalDate);
+store.write('make', submitted_make);
+store.write('model', submitted_model);
+store.write('vin', submitted_vin);
+}
+
+if(store.firstName != undefined){
+document.getElementById("firstName").value = store.firstName
+document.getElementById("lastName").value = store.lastName
+document.getElementById("phone").value = store.phone
+document.getElementById("postcode").value = store.postcode
+document.getElementById("email").value = store.email
+document.getElementById("unitType").value = store.unitType
+document.getElementById("insurer").value = store.insurer
+document.getElementById("policyNumber").value = store.policyNumber
+document.getElementById("renewalDate").value = store.renewalDate
+document.getElementById("make").value = store.make
+document.getElementById("model").value = store.model
+document.getElementById("vin").value = store.vin
+}
+</script>
+
+
+
+
+<div class="homeContent">
+<img class="homelogo_test" src="img/mainLogo.jpg" />
+<div class="pageTitle"><i class="fa fa-user fa-lg" style="font-size:38px; padding-bottom:5px;"></i><br><span style="font-size:22px; padding-left:3%;  font-weight: lighter;">Register Policy</span>&nbsp;&nbsp;</div>
+<div class="pageBanner">Step 1: Your Details</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+<form id="contact-form"  onSubmit="return savePolicyDetails()" method="post" data-ajax="false">
+  <div>
+    <label>
+      <span>First Name:</span>
+      <input id="firstName" type="text" tabindex="1" required autofocus size="20">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Last Name:</span>
+      <input  id="lastName" type="text" tabindex="2" size="20">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Telephone:</span>
+      <input  id="phone" type="tel" tabindex="3" size="15">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Postcode:</span>
+      <input  id="postcode" type="text" tabindex="4" size="8">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Email:</span>
+      <input  id="email" type="email" tabindex="5" size="30">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Unit Type:</span>
+      <input  id="unitType" type="text" tabindex="6" size="15">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Insurer:</span>
+      <select name="insurer" id="insurer">
+	  <option value="-1">Select</option>
+	  <option value="Ageas">Ageas</option>
+	  <option value="Amtrust">Amtrust</option>
+		</select>
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Policy Number:</span>
+      <input  id="policyNumber" type="text" tabindex="7" size="20">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Renewal Date:</span>
+      <input  id="renewalDate" type="date" tabindex="8"  size="8">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Make:</span>
+      <input  id="make" type="text" tabindex="9" size="20">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Model:</span>
+      <input  id="model" type="text" tabindex="9" size="20">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>VIN:</span>
+      <input  id="vin" type="text" tabindex="10" size="20">
+    </label>
+  </div>
+
+
+  <div>
+    <button class="btn btn-success" onclick="submit()" type="submit" value="Save" id="Save" data-theme="a">Save</button>
+    <button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
+	<button  class="btn btn-warning" onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo Library</button><br>
+	<img id="image" src="" style="display:none;width:10%;">
+  </div>
+</form>
+
+
+</div>
+
+</div>
