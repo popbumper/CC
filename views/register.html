@@ -15,7 +15,7 @@ function savePolicyDetails(){
 	store.write('postcode', submitted_postcode);
 	store.write('email', submitted_email);
 
-	window.location.href = '#/registerPT2';
+    window.location = '#/registerPT2';
 
 }
 
@@ -42,7 +42,7 @@ document.getElementById("email").value = store.email
   <div>
     <label>
       <span>First Name:</span>
-      <input id="firstName" type="text" tabindex="1" required autofocus size="20">
+      <input id="firstName" type="text" tabindex="1"  autofocus size="20">
     </label>
   </div>
   <div>
