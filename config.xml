@@ -45,7 +45,7 @@
 	<preference name="ios-statusbarstyle" value="black-opaque" /> <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#004238" />	
-
+	<preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
 	
 	<icon src="icon.png" />
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
