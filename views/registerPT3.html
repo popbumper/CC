@@ -18,7 +18,7 @@ if(store.firstName != undefined){
 	document.getElementById("make").value = store.make
 	document.getElementById("model").value = store.model
 	document.getElementById("vin").value = store.vin
-	document.getElementById("image1").src = store.photo1
+
 }
 
 
@@ -40,6 +40,7 @@ function onDeviceReady() {
 //
 function onPhotoDataSuccess(imageURI) {
 	console.log(imageURI);
+	store.write('photo1', imageURI);
 	var cameraImage = document.getElementById('image');
 	cameraImage.style.display = 'block';
 	cameraImage.src = imageURI;
@@ -62,7 +63,7 @@ function capturePhoto() {
 	targetHeight: 600,
 	destinationType: destinationType.FILE_URI,
 	saveToPhotoAlbum: true
-	store.write('photo1', FILE_URI);
+
 	});
 }
 
