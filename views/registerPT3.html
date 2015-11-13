@@ -18,6 +18,7 @@ if(store.firstName != undefined){
 	document.getElementById("make").value = store.make
 	document.getElementById("model").value = store.model
 	document.getElementById("vin").value = store.vin
+	document.getElementById("image1").src = store.photo1
 }
 
 
@@ -61,6 +62,7 @@ function capturePhoto() {
 	targetHeight: 600,
 	destinationType: destinationType.FILE_URI,
 	saveToPhotoAlbum: true
+	store.write('photo1', FILE_URI);
 	});
 }
 
@@ -114,7 +116,7 @@ function onFail(message) {
       <input  id="vin" type="text" tabindex="10" size="20">
     </label>
   </div>
-	Photo 1:<img id="image" src="" style="display:none;width:10%;"><button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
+	Photo 1:<img id="image1" src="" style="display:block;width:10%;"><button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
 	Photo 2:<img id="image2" src="" style="display:none;width:10%;"> <button class="btn btn-warning" onclick="capturePhoto();">Capture Photo</button><br>
 
 
