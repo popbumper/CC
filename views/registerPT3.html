@@ -42,7 +42,7 @@ function onDeviceReady() {
 //
 function onPhotoDataSuccess(imageID, imageURI) {
 	capturedPhoto ++;
-	store.write('photo'+[capturedPhoto], imageURI);
+	store.write('photo'+capturedPhoto, imageURI);
 	document.getElementById("image"+capturedPhoto).src = store.photo + capturedPhoto
 }
 
