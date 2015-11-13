@@ -17,7 +17,10 @@
         Bobby the cat 
     </author>
     
-    
+    <gap:config-file platform="android" parent="/manifest/application">
+            android:windowSoftInputMode="stateVisible"
+</gap:config-file> 
+
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
 	<gap:plugin name="cordova-plugin-camera" version="1.2.0"/>
 	<gap:plugin name="com.phonegap.plugins.barcodescanner"/>    
