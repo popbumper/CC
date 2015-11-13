@@ -239,6 +239,7 @@ color:#000;
 font-family: Verdana,Geneva,sans-serif;
 border-radius: 10px 10px 10px 10px;
 overflow: auto;
+hieght:100%;
 }
 
 .clearfix {

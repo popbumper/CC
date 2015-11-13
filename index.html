@@ -85,13 +85,51 @@ text-decoration: none;
 
 <script>
 
-window.addEventListener("resize", function(){
-  if(document.activeElement.tagName=="INPUT"){
-     window.setTimeout(function(){
-        document.activeElement.scrollIntoViewIfNeeded();
-     },0);
-  }
-})
+ window.addEventListener('native.keyboardshow', function (e) {
+    var deviceHeight = window.innerHeight;
+    var keyboardHeight = e.keyboardHeight;
+    var deviceHeightAdjusted = deviceHeight - keyboardHeight;
+    deviceHeightAdjusted = deviceHeightAdjusted < 0 ? (deviceHeightAdjusted * -1) : deviceHeightAdjusted;
+    document.getElementById('page').style.height = deviceHeightAdjusted + 'px';
+    document.getElementById('page').setAttribute('keyBoardHeight', keyboardHeight);
+});
+
+
+  window.addEventListener('native.keyboardhide', function (e) {
+    setTimeout(function () {
+        document.getElementById('page').style.height = 100 + '%';
+    }, 100);
+    });
+
+var inputs = document.querySelectorAll('input');//select all input
+var n = inputs.length;
+for (var i = 0; i < n; i++) {
+    var input = inputs[i];
+    input.addEventListener('focus', function (e) {//add event focus
+        var inp = this;
+       //wait 0.6 seconds to scroll down to the input has focus
+        setTimeout(function () {
+            try {
+                //if the keyboard is open
+                if (cordova.plugins.Keyboard.isVisible) {
+                    var padding = 15;
+                    var targetPosition = parseInt($$(inp).offset().top + padding);
+                    var keyboardHeight = parseInt(document.getElementById('page').getAttribute('keyBoardHeight'));//get keyboard height
+
+                    //if the input is hidden by the keyboard,scroll to the input
+                    if (targetPosition >= keyboardHeight) {
+                        padding *=5;
+                        document.getElementById('page').scrollTop = targetPosition - padding;
+                    }
+                }
+            } catch (ex) {
+                alert(ex.message);
+            }
+        }, 600);
+    }, true);
+ };
+
+
 
 var pictureSource; // picture source
 var destinationType; // sets the format of returned value
