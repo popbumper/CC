@@ -2,16 +2,15 @@
 var store = Rhaboo.persistent('policy');
 function savePolicyDetails(){
 
-	var submitted_unitType = document.getElementById("unitType").value;
-	var submitted_insurer = document.getElementById("insurer").value;
-	var submitted_policyNumber = document.getElementById("policyNumber").value;
-	var submitted_renewalDate = document.getElementById("renewalDate").value;
+	var unitType = document.getElementById("unitType").value;
+	var insurer = document.getElementById("insurer").value;
+	var policyNumber = document.getElementById("policyNumber").value;
+	var renewalDate = document.getElementById("renewalDate").value;
 
-	store.write('unitType', submitted_unitType);
-	store.write('insurer', submitted_insurer);
-	store.write('policyNumber', submitted_policyNumber);
-	store.write('renewalDate', submitted_renewalDate);
-
+	store.write('unitType', unitType);
+	store.write('insurer', insurer);
+	store.write('policyNumber', policyNumber);
+	store.write('renewalDate', renewalDate);
 
 	window.location = '#/registerPT3';
 
@@ -35,7 +34,7 @@ if(store.firstName != undefined){
 <div style="clear: both;"></div>
 <div class="pageBlock">
 
-<form id="contact-form"  onSubmit="return savePolicyDetails()" method="post" data-ajax="false">
+<form id="step2">
   <div>
       <label>
         <span>Unit Type:</span>
@@ -68,7 +67,7 @@ if(store.firstName != undefined){
 
   <div style="text-align:right;">
 
-    <button class="btn btn-success" onclick="submit()" type="submit" value="Save" id="Continue" data-theme="a">Continue</button>
+    <button class="btn btn-success" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">Continue</button>
 
   </div>
 </form>

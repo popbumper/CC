@@ -2,14 +2,13 @@
 var store = Rhaboo.persistent('policy');
 function savePolicyDetails(){
 
-	var submitted_make = document.getElementById("make").value;
-	var submitted_model = document.getElementById("model").value;
-	var submitted_vin = document.getElementById("vin").value;
+	var make = document.getElementById("make").value;
+	var model = document.getElementById("model").value;
+	var vin = document.getElementById("vin").value;
 
-	store.write('make', submitted_make);
-	store.write('model', submitted_model);
-	store.write('vin', submitted_vin);
-
+	store.write('make', make);
+	store.write('model', model);
+	store.write('vin', vin);
 
 	window.location = '#/policy';
 
@@ -96,7 +95,7 @@ function onFail(message) {
 <div style="clear: both;"></div>
 <div class="pageBlock">
 
-<form id="contact-form"  onSubmit="return savePolicyDetails()" method="post" data-ajax="false">
+<form id="step3">
 <div>
     <label>
       <span>Make:</span>
@@ -123,7 +122,7 @@ function onFail(message) {
 
   <div style="text-align:right;">
 
-    <button class="btn btn-success" onclick="submit()" type="submit" value="Save" id="Continue" data-theme="a">Finish</button>
+    <button class="btn btn-success" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">Finish</button>
 
   </div>
 </form>

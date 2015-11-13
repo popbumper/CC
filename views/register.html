@@ -2,29 +2,28 @@
 var store = Rhaboo.persistent('policy');
 
 function savePolicyDetails(){
+	var firstName = document.getElementById("firstName").value;
+	var lastName = document.getElementById("lastName").value;
+	var phone = document.getElementById("phone").value;
+	var postcode = document.getElementById("postcode").value;
+	var email = document.getElementById("email").value;
 
-	var submitted_firstName = document.getElementById("firstName").value;
-	var submitted_lastName = document.getElementById("lastName").value;
-	var submitted_phone = document.getElementById("phone").value;
-	var submitted_postcode = document.getElementById("postcode").value;
-	var submitted_email = document.getElementById("email").value;
-
-	store.write('firstName', submitted_firstName);
-	store.write('lastName', submitted_lastName);
-	store.write('phone', submitted_phone);
-	store.write('postcode', submitted_postcode);
-	store.write('email', submitted_email);
+	store.write('firstName', firstName);
+	store.write('lastName', lastName);
+	store.write('phone', phone);
+	store.write('postcode', postcode);
+	store.write('email', email);
 
     window.location = '#/registerPT2';
 
 }
 
 if(store.firstName != undefined){
-document.getElementById("firstName").value = store.firstName
-document.getElementById("lastName").value = store.lastName
-document.getElementById("phone").value = store.phone
-document.getElementById("postcode").value = store.postcode
-document.getElementById("email").value = store.email
+	document.getElementById("firstName").value = store.firstName
+	document.getElementById("lastName").value = store.lastName
+	document.getElementById("phone").value = store.phone
+	document.getElementById("postcode").value = store.postcode
+	document.getElementById("email").value = store.email
 }
 </script>
 
@@ -38,7 +37,7 @@ document.getElementById("email").value = store.email
 <div style="clear: both;"></div>
 <div class="pageBlock">
 
-<form id="contact-form"  onSubmit="return savePolicyDetails()" method="post" data-ajax="false">
+<form id="step1">
   <div>
     <label>
       <span>First Name:</span>
@@ -73,7 +72,7 @@ document.getElementById("email").value = store.email
 
   <div style="text-align:right;">
 
-    <button class="btn btn-success" onclick="submit()" type="submit" value="Save" id="Save" data-theme="a">Continue</button>
+    <button class="btn btn-success" onclick="savePolicyDetails()"  value="Save" id="Save" data-theme="a">Continue</button>
 
   </div>
 </form>
