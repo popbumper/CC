@@ -130,8 +130,8 @@ window.plugin.email.open({
 
         <script type="text/javascript">
             app.initialize();
-            var viewportScale = 1 / window.devicePixelRatio;
-			$("#viewport").attr("content","user-scalable=no, initial-scale="+viewportScale+", minimum-scale=0.2, maximum-scale=2, width=device-width");
+            var viewportScale = 1.0 / window.devicePixelRatio;
+			$("#viewport").attr("content","user-scalable=no, initial-scale="+viewportScale+", minimum-scale=1, maximum-scale=1.0, width=device-width, height=device-height");
         </script>
     </body>
 </html>
