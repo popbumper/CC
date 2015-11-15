@@ -68,9 +68,8 @@ function onPhotoURISuccess(imageURI) {
 }
 
 
-function capturePhoto(imageID) {
-	var onPhotoDataSuccessGET = 'onPhotoDataSuccess' + imageID;
-	navigator.camera.getPicture(onPhotoDataSuccessGET, onFail, {
+function capturePhoto() {
+	navigator.camera.getPicture(onPhotoDataSuccess1 onFail, {
 	quality: 50,
 	targetWidth: 600,
 	targetHeight: 600,
@@ -79,6 +78,22 @@ function capturePhoto(imageID) {
 	correctOrientation: true
 	});
 }
+
+
+function capturePhoto2() {
+	navigator.camera.getPicture(onPhotoDataSuccess2, onFail, {
+	quality: 50,
+	targetWidth: 600,
+	targetHeight: 600,
+	destinationType: destinationType.FILE_URI,
+	saveToPhotoAlbum: true,
+	correctOrientation: true
+	});
+}
+
+
+
+
 
 function getPhoto(source) {
 // Retrieve image file location from specified source
@@ -131,8 +146,8 @@ function onFail(message) {
       <input  id="vin" type="text" tabindex="10" size="20">
     </label>
   </div>
-	Photo 1:<img id="image1" src="" style="display:block;width:5%;" onclick="capturePhoto(1);">	<button class="btn btn-warning" onclick="capturePhoto(1);">Capture Photo 1</button><br>
-	Photo 2:<img id="image2" src="" style="display:block;width:5%;" onclick="capturePhoto(2);"><button class="btn btn-warning" onclick="capturePhoto(2);">Capture Photo 2</button>
+	Photo 1:<img id="image1" src="" style="display:block;width:5%;" onclick="capturePhoto(1);">	<button class="btn btn-warning" onclick="capturePhoto1;">Capture Photo 1</button><br>
+	Photo 2:<img id="image2" src="" style="display:block;width:5%;" onclick="capturePhoto(2);"><button class="btn btn-warning" onclick="capturePhoto2;">Capture Photo 2</button>
 
 
 
