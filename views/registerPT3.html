@@ -70,7 +70,7 @@ function onPhotoURISuccess(imageURI) {
 
 function capturePhoto(imageID) {
 	var onPhotoDataSuccessGET = 'onPhotoDataSuccess' + imageID;
-	navigator.camera.getPicture(onPhotoDataSuccessGET.toString(), onFail, {
+	navigator.camera.getPicture(onPhotoDataSuccessGET, onFail, {
 	quality: 50,
 	targetWidth: 600,
 	targetHeight: 600,
