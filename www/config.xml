@@ -18,7 +18,8 @@
     </author>
     
 
-
+	<gap:plugin name="org.apache.cordova.device"/>	
+	<gap:plugin name="org.apache.cordova.statusbar"/>
 	<gap:plugin name="org.apache.cordova.inappbrowser"/>
 	<gap:plugin name="cordova-plugin-camera" version="1.2.0"/>
 	<gap:plugin name="com.phonegap.plugins.barcodescanner"/>    
@@ -69,4 +70,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+        <feature name="Device">
+            <param name="ios-package" value="CDVDevice" />
+</feature>
 </widget>
