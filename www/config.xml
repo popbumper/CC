@@ -26,6 +26,7 @@
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 	<gap:plugin name="com.ionic.keyboard"/>
+	<gap:plugin name="cordova-plugin-whitelist"/>
 
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
@@ -50,13 +51,13 @@
 	
 	<icon src="icon.png" />
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
-	
+   
 	
   <access origin="http://www.clubcareinsurance.com" subdomains="true" />
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
-    <plugin name="cordova-plugin-whitelist" version="1" />
+   
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -66,6 +67,7 @@
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+    
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
