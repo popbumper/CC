@@ -197,26 +197,31 @@ outline: none;
 }
 
  .homelogo_test {
-	 top: -10px;
-	 left: 25px;
+ float:left;
+	 //top: -10px;
+	 margin-left: 25px;
 	 width: 32vw;
-	 position: relative;
+	 //position: relative;
+	 padding:4px;
  }
 
  .pageTitle {
-	top: -90px;
-	left: 55px;
-	position: relative;
+ 	float:center;
+	//top: -90px;
+	//left: 55px;
+	//position: relative;
+	//margin-right: 25px;
 	text-align:center;
+	padding:4px;
  }
 
 .pageBanner{
 	position: relative;
 	float:right;
-	top: -44px;
+	top: 20px;
 	height:28px;
 	width:auto;
-	background-color:#ff0000;
+	background-color:#ea5c51;
 	color:#fff;
 	font-size:18px;
 	padding: 4px;
@@ -228,8 +233,8 @@ outline: none;
 
 .pageBlock {
 padding:10px;
-//position: relative;
-//top: -22px;
+position: relative;
+top: 28px;
 margin: 0 auto;
 width:90%;
 background-color:#fff;
@@ -245,3 +250,5 @@ overflow: auto;
 .clearfix {
    	clear: both;
 }
+
+
