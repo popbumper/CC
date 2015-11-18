@@ -58,8 +58,8 @@ clubCare.config(['$routeProvider',
       when('/more', {
         templateUrl: 'views/more.html'
       }).
-      when('/policysave', {
-        templateUrl: 'policysave_pt1.html'
+      when('/share', {
+        templateUrl: 'views/share.html'
       }).
       otherwise({
         redirectTo: '/'

@@ -26,6 +26,8 @@
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 	<gap:plugin name="com.ionic.keyboard"/>
+	<gap:plugin name="cordova-sms-plugin"/>
+	
 
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
