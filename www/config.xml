@@ -26,7 +26,7 @@
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 	<gap:plugin name="com.ionic.keyboard"/>
-	<gap:plugin name="https://github.com/cordova-sms/cordova-sms-plugin.git"/>
+	<gap:plugin name="com.cordova.plugins.sms" version="0.1.1" />
 	
 
 
