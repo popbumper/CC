@@ -26,7 +26,6 @@
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 	<gap:plugin name="com.ionic.keyboard"/>
-	<gap:plugin name="cordova-plugin-whitelist"/>
 
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
@@ -51,7 +50,8 @@
 	
 	<icon src="icon.png" />
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
-   
+    <access origin="mailto:*" launch-external="yes"/>
+    <access origin="tel:*" launch-external="yes"/>	
 	
   <access origin="http://www.clubcareinsurance.com" subdomains="true" />
 
