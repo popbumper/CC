@@ -77,12 +77,14 @@ footer ul#menu > li.tab-button.active {
 
 
 .homeContent {
+position: fixed;
 	width: 100%;
 	margin-top: 0%;
 	height:92vh;
 	background:  transparent url(../img/backcara.jpg) no-repeat center center;
     	background-size: cover;
-    	overflow: hidden;
+    	overflow: auto;
+    	
 }
 
 
