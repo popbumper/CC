@@ -1,38 +1,23 @@
 <script>
-document.querySelector("#sendMessage").addEventListener("touchend", function() {
-		console.log("click");
-		var number = document.querySelector("#number").value;
-		var message = document.querySelector("#message").value;
-		console.log("going to send "+message+" to "+number);
+sendSms: function() {
+        var number = document.getElementById('numberTxt').value;
+        var message = document.getElementById('messageTxt').value;
+        alert(number);
+        alert(message);
 
-		//simple validation for now
-		if(number === '' || message === '') return;
+        //CONFIGURATION
+        var options = {
+            replaceLineBreaks: false, // true to replace \n by a new line, false by default
+            android: {
+                intent: 'INTENT'  // send SMS with the native android SMS messaging
+                //intent: '' // send SMS without open any other app
+            }
+        };
 
-		var msg = {
-			phoneNumber:number,
-			textMessage:message
-		};
-
-		sms.sendMessage(msg, function(message) {
-			console.log("success: " + message);
-			navigator.notification.alert(
-			    'Message to ' + number + ' has been sent.',
-			    null,
-			    'Message Sent',
-			    'Done'
-			);
-
-		}, function(error) {
-			console.log("error: " + error.code + " " + error.message);
-			navigator.notification.alert(
-				'Sorry, message not sent: ' + error.message,
-				null,
-				'Error',
-				'Done'
-			);
-		});
-
-	}, false);
+        var success = function () { alert('Message sent successfully'); };
+        var error = function (e) { alert('Message Failed:' + e); };
+        sms.send(number, message, options, success, error);
+    }
 </script>
 
 
@@ -49,11 +34,9 @@ document.querySelector("#sendMessage").addEventListener("touchend", function() {
 
  <div class="content">
 	    	<div class="content-padded">
-		    	<form>
-				<input type="text" id="number" placeholder="Phone Number"><br/>
-				<textarea id="message" placeholder="Message"></textarea>
-				<input type="button" class="btn btn-positive btn-block" id="sendMessage" value="Send Message">
-				</form>
+		    	<input id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
+				<textarea id="messageTxt" placeholder="Enter message"></textarea>
+				<input type="button" onclick="app.sendSms()" value="Send SMS" />
 			</div>
 		</div>
 
