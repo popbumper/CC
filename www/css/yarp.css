@@ -88,6 +88,39 @@ position: fixed;
 }
 
 
+.homeContent2 {
+position: fixed;
+	width: 100%;
+	margin-top: 0%;
+	height:92vh;
+	background:  transparent url(../img/backcara2.jpg) no-repeat center center;
+    	background-size: cover;
+    	overflow: auto;
+    	
+}
+
+.homeContent3 {
+position: fixed;
+	width: 100%;
+	margin-top: 0%;
+	height:92vh;
+	background:  transparent url(../img/backcara3.jpg) no-repeat center center;
+    	background-size: cover;
+    	overflow: auto;
+    	
+}
+
+.homeContent4 {
+position: fixed;
+	width: 100%;
+	margin-top: 0%;
+	height:92vh;
+	background:  transparent url(../img/backcara4.jpg) no-repeat center center;
+    	background-size: cover;
+    	overflow: auto;
+    	
+}
+
 .intro {
 	text-align:center;
 	padding: 8%;
@@ -215,12 +248,13 @@ outline: none;
 	//margin-right: 25px;
 	text-align:center;
 	padding:4px;
+	color:#014f9a;
  }
 
 .pageBanner{
 	position: relative;
 	float:right;
-	top: 20px;
+	top: 10px;
 	height:28px;
 	width:auto;
 	background-color:#ea5c51;
@@ -236,7 +270,7 @@ outline: none;
 .pageBlock {
 padding:10px;
 position: relative;
-top: 28px;
+top: 20px;
 margin: 0 auto;
 width:90%;
 background-color:#fff;
@@ -253,4 +287,60 @@ overflow: auto;
    	clear: both;
 }
 
+.feedback-input {
+	color:#3c3c3c;
+	font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+	font-size: 18px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fbfbfb;
+	padding: 3px 3px 3px 3px;
+	margin-bottom: 2px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 3px solid rgba(0,0,0,0);
+}
 
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	border: 3px solid #3498db;
+	color: #3498db;
+	outline: none;
+  //padding: 13px 13px 13px 54px;
+}
+
+
+    select:required:invalid {
+    color: #999;
+    }
+    option[value=””][disabled] {
+    display: none;
+    }
+    option {
+    color: #000;
+    }
+    
+    
+.boxer {
+   width:100%;
+   display: table;
+   border-collapse: collapse;
+}
+ 
+.boxer .box-row {
+   display: table-row;
+   text-align:center;
+}
+ 
+.boxer .box {
+   display: table-cell;
+   text-align: center;
+   vertical-align: top;
+   //border: 1px solid black;
+}    
+    

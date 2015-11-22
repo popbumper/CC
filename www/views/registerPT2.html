@@ -17,8 +17,17 @@ function savePolicyDetails(){
 }
 
 if(store.firstName != undefined){
+
+	if(store.insurer == 'Ageas'){
+		document.getElementById("Ageas").selected = true;
+	}
+
+	if(store.insurer == 'Amtrust'){
+		document.getElementById("Amtrust").selected = true;
+	}
+
+
 	document.getElementById("unitType").value = store.unitType
-	document.getElementById("insurer").value = store.insurer
 	document.getElementById("policyNumber").value = store.policyNumber
 	document.getElementById("renewalDate").value = store.renewalDate
 }
@@ -29,46 +38,36 @@ if(store.firstName != undefined){
 
 <div class="homeContent">
 <img class="homelogo_test" src="img/mainLogo.png" />
-<div class="pageTitle" style="margin-top:10px;"><i class="fa fa-user fa-lg" style="font-size:38px; padding:1%;"></i><br><span style="font-size:22px; font-weight: lighter;">Register Policy</span></div>
+<div class="pageTitle" style="margin-top:40px;"><span style="font-size:22px; font-weight: 700;">Register Policy</span></div>
 <div style="clear: both;"></div>
 <div class="pageBanner">Step 2: Your Policy Details</div>
 <div style="clear: both;"></div>
 <div class="pageBlock">
 
 <form id="step2">
-  <div>
-      <label>
-        <span>Unit Type:</span>
-        <input  id="unitType" type="text" tabindex="6" size="15">
-      </label>
-    </div>
-    <div>
-      <label>
-        <span>Insurer:</span>
-        <select name="insurer" id="insurer">
-  	  <option value="-1">Select</option>
-  	  <option value="Ageas">Ageas</option>
-  	  <option value="Amtrust">Amtrust</option>
-  		</select>
-      </label>
-    </div>
-    <div>
-      <label>
-        <span>Policy Number:</span>
-        <input  id="policyNumber" type="text" tabindex="7" size="20">
-      </label>
-    </div>
-    <div>
-      <label>
-        <span>Renewal Date:</span>
-        <input  id="renewalDate" type="date" tabindex="8"  size="8">
-      </label>
-  </div>
 
+	<p>Unit Type
+	 <input name="unitType" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Unit Type" id="unitType" />
+	</p>
 
-  <div style="text-align:right;">
+	<p>Current Insurer
+	<select name="insurer" id="insurer" class="feedback-input">
+		<option value="-1" disabled >Current Insurer</option>
+		<option id="Ageas" value="Ageas">Ageas</option>
+		<option id="Amtrust" value="Amtrust">Amtrust</option>
+	</select>
+	</p>
 
-    <button class="btn btn-success" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">Continue</button>
+	<p>
+	Policy Number
+	 <input name="policyNumber" type="text" class="feedback-input" placeholder="Policy Number" id="policyNumber" />
+	</p>
+
+	<p>
+	 Renewal Date<input name="renewalDate" type="date" class="feedback-input"  id="renewalDate" placeholder="Rewnewal Date" />
+	</p>
+
+    <button class="btn btn-success" style="width:100%;" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">CONTINUE</button>
 
   </div>
 </form>
