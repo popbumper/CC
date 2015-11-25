@@ -354,4 +354,27 @@ overflow: auto;
         font-size: 1.2em;
     }
    
+   
+#url-wrapper{
+    margin-top: 3%;
+    height: 100%;
+    background:#fff;
+}
 
+#url-wrapper iframe{
+    height: 100%;
+    width: 100%;
+}
+
+#url-wrapper.ios{
+    overflow-y: auto;
+    -webkit-overflow-scrolling:touch !important;
+    height: 100%;
+}
+
+#url-wrapper.ios iframe{
+    height: 100%;
+    min-width: 100%;
+    width: 100px;
+    *width: 100%;
+}

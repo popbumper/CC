@@ -87,7 +87,25 @@ text-decoration: none;
 
 
 
+function create_iframe(url){
 
+    var wrapper = jQuery('#url-wrapper');
+
+    if(navigator.userAgent.match(/(iPod|iPhone|iPad)/)){
+        wrapper.addClass('ios');
+        var scrolling = 'no';
+    }else{
+        var scrolling = 'yes';
+    }
+
+    jQuery('<iframe>', {
+        src: url,
+        id:  'url',
+        frameborder: 0,
+        scrolling: scrolling
+    }).appendTo(wrapper);
+
+}
 
 
 
