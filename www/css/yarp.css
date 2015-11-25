@@ -80,7 +80,7 @@ footer ul#menu > li.tab-button.active {
 position: fixed;
 	width: 100%;
 	margin-top: 0%;
-	height:92vh;
+	height:100vh;
 	background:  transparent url(../img/backcara.jpg) no-repeat center center;
     	background-size: cover;
     	overflow: auto;
@@ -92,7 +92,7 @@ position: fixed;
 position: fixed;
 	width: 100%;
 	margin-top: 0%;
-	height:92vh;
+	height:100vh;
 	background:  transparent url(../img/backcara2.jpg) no-repeat center center;
     	background-size: cover;
     	overflow: auto;
@@ -103,7 +103,7 @@ position: fixed;
 position: fixed;
 	width: 100%;
 	margin-top: 0%;
-	height:92vh;
+	height:100vh;
 	background:  transparent url(../img/backcara3.jpg) no-repeat center center;
     	background-size: cover;
     	overflow: auto;
@@ -114,7 +114,7 @@ position: fixed;
 position: fixed;
 	width: 100%;
 	margin-top: 0%;
-	height:92vh;
+	height:100vh;
 	background:  transparent url(../img/backcara4.jpg) no-repeat center center;
     	background-size: cover;
     	overflow: auto;
@@ -124,10 +124,10 @@ position: fixed;
 .intro {
 	text-align:center;
 	padding: 8%;
-	margin-top: 0%;
 	height:92vh;
 	font-family:"Open Sans", Helvetica, Arial;
-
+ margin-left:auto;
+  margin-right:auto;
 
 
 }
@@ -238,6 +238,7 @@ outline: none;
 	 width: 32vw;
 	 //position: relative;
 	 //padding:4px;
+	 
  }
 
  .pageTitle {
@@ -343,4 +344,14 @@ overflow: auto;
    vertical-align: top;
    //border: 1px solid black;
 }    
-    
+
+
+/* Start with default styles for phone-sized devices */
+    p,li{
+        font-size: 0.9em;
+    }
+    h1{
+        font-size: 1.2em;
+    }
+   
+
