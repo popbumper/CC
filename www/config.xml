@@ -54,7 +54,7 @@
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
     <access origin="mailto:*" launch-external="yes"/>
     <access origin="tel:*" launch-external="yes"/>	
-	
+<access origin="http://www.popbumper.co.uk" subdomains="true" />	
   <access origin="http://www.clubcareinsurance.com" subdomains="true" />
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
