@@ -1,0 +1,61 @@
+<script src=”http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js”></script>
+<script>
+//var store = Rhaboo.persistent('policy');
+
+
+
+//Get data to send
+//var image1 = store.photo1
+var uname = "Mike";
+
+$.ajax({
+	type:"POST",
+	url: "http://www.popbumper.co.uk/mailtest.php",
+	data : ({
+	uuid:device.uuid,
+	uname:uname,
+	//sname:sname,
+	//emailid:emailid,
+	//company:company,
+	//country:country,
+	//jobtitle:jobtitle,
+	//jobfunction:jobfunction
+
+}),
+success: function(){
+ 	alert("worked");
+},
+error :function(){
+	alert("nope :( ");
+},
+complete : function(){
+	alert("Thank you for your registration you will receive the email with further information soon");
+	//window.location=’index.html#waiting';
+}
+});
+//}
+//return false;
+//});
+//});
+
+
+
+</script>
+
+
+
+
+<div class="homeContent">
+<img class="homelogo_test" src="img/mainLogo.png" />
+<div class="pageTitle" style="margin-top:40px;"><span style="font-size:22px; font-weight: 700;">Register Policy</span></div>
+<div style="clear: both;"></div>
+<div class="pageBanner">Step 5: Send</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+<h1>Details saved and sent!</h1>
+
+
+</div>
+
+</div>
