@@ -1,27 +1,46 @@
+<canvas id="canvas" width="100px" height="100px" ></canvas>
 
 <script>
-//var store = Rhaboo.persistent('policy');
+var store = Rhaboo.persistent('policy');
+
+//populate images
+document.getElementById("image1").src = store.photo1;
+
+
+var context = document.getElementById('canvas').getContext("2d");
+var img = new Image();
+img.onload = function () {
+context.drawImage(img, 75, 55, 150, 110);
+}
+img.src = store.photo1;
+
+
+var c = document.getElementById("canvas");
+
 
 
 
 //Get data to send
-//var image1 = store.photo1
-var uname = "Mike";
+var dataURL1 = c.toDataURL();
+var uname = store.Name;
+var uemail = store.email;
+
+//alert(img.value);
+
+
 
 $.ajax({
-	type:"GET",
+	type:"POST",
 	url: "http://www.popbumper.co.uk/mailtest.php",
 	data : ({
 	//uuid:device.uuid,
 	uname:uname,
-	//sname:sname,
-	//emailid:emailid,
-	//company:company,
-	//country:country,
-	//jobtitle:jobtitle,
-	//jobfunction:jobfunction
-
+	uemail:uemail,
+	image1SRC:dataURL1
 }),
+
+
+
 success: function(){
  	alert("worked");
 },
@@ -33,12 +52,6 @@ complete : function(){
 	//window.location=’index.html#waiting';
 }
 });
-//}
-//return false;
-//});
-//});
-
-
 
 </script>
 
@@ -52,6 +65,7 @@ complete : function(){
 <div class="pageBanner">Step 5: Send</div>
 <div style="clear: both;"></div>
 <div class="pageBlock">
+<img id="image1" name="image1" src="" style="width:10%;">
 
 <h1>Details saved and sent!</h1>
 
