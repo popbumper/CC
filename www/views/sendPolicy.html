@@ -1,4 +1,4 @@
-<canvas id="canvas" width="100px" height="100px" ></canvas>
+<canvas id="canvas" width="100px" height="100px" style="display: none"></canvas>
 
 <script>
 var store = Rhaboo.persistent('policy');
@@ -10,7 +10,7 @@ document.getElementById("image1").src = store.photo1;
 var context = document.getElementById('canvas').getContext("2d");
 var img = new Image();
 img.onload = function () {
-context.drawImage(img, 75, 55, 150, 110);
+context.drawImage(img, 0, 0);
 }
 img.src = store.photo1;
 
@@ -42,33 +42,21 @@ $.ajax({
 
 
 success: function(){
- 	alert("worked");
+ 	//alert("worked");
+ 	window.location = '#/policy';
 },
 error :function(){
-	alert("nope :( ");
+	//alert("nope :( ");
 },
 complete : function(){
-	alert("Thank you for your registration you will receive the email with further information soon");
+	//alert("Thank you for your registration you will receive the email with further information soon");
 	//window.location=’index.html#waiting';
 }
 });
 
 </script>
 
-
-
-
-<div class="homeContent">
-<img class="homelogo_test" src="img/mainLogo.png" />
-<div class="pageTitle" style="margin-top:40px;"><span style="font-size:22px; font-weight: 700;">Register Policy</span></div>
-<div style="clear: both;"></div>
-<div class="pageBanner">Step 5: Send</div>
-<div style="clear: both;"></div>
-<div class="pageBlock">
-<img id="image1" name="image1" src="" style="width:10%;">
-
-<h1>Details saved and sent!</h1>
-
+<img id="image1" name="image1" src="" style="width:10%; display: none">
 
 </div>
 
