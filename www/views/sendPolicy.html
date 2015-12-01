@@ -1,49 +1,24 @@
-<canvas id="canvas" width="100px" height="100px" style="display: none"></canvas>
-
 <script>
 var store = Rhaboo.persistent('policy');
-
-//populate images
-document.getElementById("image1").src = store.photo1;
-
-
-var context = document.getElementById('canvas').getContext("2d");
-var img = new Image();
-img.onload = function () {
-context.drawImage(img, 0, 0);
-}
-img.src = store.photo1;
-
-
-var c = document.getElementById("canvas");
-
-
-
-
-//Get data to send
-var dataURL1 = c.toDataURL();
 var uname = store.Name;
 var uemail = store.email;
-
-//alert(img.value);
-
-
+var dataURL1 = store.photo1SRC;
 
 $.ajax({
 	type:"POST",
 	url: "http://www.popbumper.co.uk/mailtest.php",
+	//url: "http://clubcare.hyperlogic.uk/mailtest.php",
+	contentType: "application/x-www-form-urlencoded",
+	cache: false,
 	data : ({
 	//uuid:device.uuid,
 	uname:uname,
 	uemail:uemail,
 	image1SRC:dataURL1
 }),
-
-
-
 success: function(){
- 	//alert("worked");
- 	window.location = '#/policy';
+	//alert(data);
+	window.location = '#/policy';
 },
 error :function(){
 	//alert("nope :( ");
@@ -53,11 +28,4 @@ complete : function(){
 	//window.location=’index.html#waiting';
 }
 });
-
 </script>
-
-<img id="image1" name="image1" src="" style="width:10%; display: none">
-
-</div>
-
-</div>

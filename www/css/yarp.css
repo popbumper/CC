@@ -48,7 +48,7 @@ footer ul#menu {
 }
 footer ul#menu > li.tab-button {
 	display: block;
-	width: 25%;
+	width: 20%;
 	padding: 4px 0;
 	float: left;
 	text-align: center;
@@ -116,6 +116,17 @@ position: fixed;
 	margin-top: 0%;
 	height:100vh;
 	background:  transparent url(../img/backcara4.jpg) no-repeat center center;
+    	background-size: cover;
+    	overflow: auto;
+    	
+}
+
+.iframeContent {
+position: fixed;
+	width: 100%;
+	margin-top: 0%;
+	height:100vh;
+	background:  transparent url(../img/iframeBG.jpg) no-repeat center center;
     	background-size: cover;
     	overflow: auto;
     	

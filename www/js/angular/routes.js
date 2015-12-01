@@ -73,6 +73,9 @@ clubCare.config(['$routeProvider',
       when('/claim', {
         templateUrl: 'views/claim.html'
       }).
+      when('/claim2', {
+        templateUrl: 'views/claimPT2.html'
+      }).
       when('/contact', {
         templateUrl: 'views/contact.html'
       }).

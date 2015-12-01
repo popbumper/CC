@@ -7,7 +7,7 @@ function savePolicyDetails(){
 }
 
 if(store.firstName != undefined){
-    document.getElementById("image1").src = store.photo1
+    document.getElementById("image1").src = "data:image/jpeg;base64," + store.photo1SRC;
 	document.getElementById("image2").src = store.photo2
 	document.getElementById("image3").src = store.photo3
 	document.getElementById("image4").src = store.photo4
@@ -37,10 +37,11 @@ function onDeviceReady() {
 
 
 
-function onPhotoDataSuccess1(imageURI) {
-	store.write('photo1', imageURI);
-	document.getElementById("image1").src = store.photo1
+function onPhotoDataSuccess1(imageData) {
+	store.write('photo1SRC', imageData);
+	document.getElementById("image1").src = "data:image/jpeg;base64," + imageData;
 }
+
 
 function onPhotoDataSuccess2(imageURI) {
 	store.write('photo2', imageURI);
@@ -80,14 +81,14 @@ function onPhotoURISuccess(imageURI) {
 	galleryImage.src = imageURI;
 }
 
-
 function capturePhoto1() {
 	navigator.camera.getPicture(onPhotoDataSuccess1, onFail, {
-	quality: 50,
-	targetWidth: 600,
-	targetHeight: 600,
-	destinationType: destinationType.FILE_URI,
-	saveToPhotoAlbum: true,
+	quality: 40,
+	encodingType : Camera.EncodingType.JPEG,
+	targetWidth: 200,
+	targetHeight: 200,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
 	correctOrientation: true
 	});
 }
@@ -175,9 +176,9 @@ function onFail(message) {
 
 <div class="homeContent">
 <img class="homelogo_test" src="img/mainLogo.png" />
-<div class="pageTitle" style="margin-top:40px;"><span style="font-size:22px; font-weight: 700;">Register Policy</span></div>
+<div class="pageTitle" style="margin-top:8px;"><img src="img/defaqto.png" /></div>
 <div style="clear: both;"></div>
-<div class="pageBanner">Step 4: Your Caravan Photos</div>
+<div class="pageBanner">Step 4: My Caravan Photos</div>
 <div style="clear: both;"></div>
 <div class="pageBlock">
 

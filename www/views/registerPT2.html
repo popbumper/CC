@@ -38,21 +38,28 @@ if(store.firstName != undefined){
 
 <div class="homeContent">
 <img class="homelogo_test" src="img/mainLogo.png" />
-<div class="pageTitle" style="margin-top:40px;"><span style="font-size:22px; font-weight: 700;">Register Policy</span></div>
+<div class="pageTitle" style="margin-top:8px;"><img src="img/defaqto.png" /></div>
 <div style="clear: both;"></div>
-<div class="pageBanner">Step 2: Your Policy Details</div>
+<div class="pageBanner">Step 2: My Policy Details</div>
 <div style="clear: both;"></div>
 <div class="pageBlock">
 
 <form id="step2">
 
 	<p>Unit Type
-	 <input name="unitType" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Unit Type" id="unitType" />
+	<select name="unitType" id="unitType" class="feedback-input">
+		<option value="-1">Select Unit Type</option>
+		<option id="Touring Caravan" value="Touring Caravan">Touring Caravan</option>
+		<option id="Trailer Tent" value="Trailer Tent">Trailer Tent</option>
+		<option id="Folding Caravan" value="Folding Caravan">Folding Caravan</option>
+		<option id="Trailer" value="Trailer ">Trailer </option>
+	</select>
 	</p>
 
 	<p>Current Insurer
 	<select name="insurer" id="insurer" class="feedback-input">
-		<option value="-1" disabled >Current Insurer</option>
+		<option value="-1">Select Insurer</option>
+		<option id="NotCC" value="NotCC">Not insured with Club Care</option>
 		<option id="Ageas" value="Ageas">Ageas</option>
 		<option id="Amtrust" value="Amtrust">Amtrust</option>
 	</select>
