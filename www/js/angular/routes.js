@@ -38,6 +38,20 @@ clubCare.config(['$routeProvider',
       when('/hints', {
         templateUrl: 'views/hints.html'
       }).
+
+       when('/winter', {
+        templateUrl: 'views/winter.html'
+      }).
+       when('/spring', {
+        templateUrl: 'views/spring.html'
+      }).
+       when('/summer', {
+        templateUrl: 'views/summer.html'
+      }).
+       when('/autumn', {
+        templateUrl: 'views/autumn.html'
+      }).
+
       when('/share', {
         templateUrl: 'views/share.html'
       }).
