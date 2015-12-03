@@ -8,11 +8,11 @@ function savePolicyDetails(){
 
 if(store.firstName != undefined){
     document.getElementById("image1").src = "data:image/jpeg;base64," + store.photo1SRC;
-	document.getElementById("image2").src = store.photo2
-	document.getElementById("image3").src = store.photo3
-	document.getElementById("image4").src = store.photo4
-	document.getElementById("image5").src = store.photo5
-	document.getElementById("image6").src = store.photo6
+	document.getElementById("image2").src = "data:image/jpeg;base64," + store.photo2SRC;
+	document.getElementById("image3").src = "data:image/jpeg;base64," + store.photo3SRC;
+	document.getElementById("image4").src = "data:image/jpeg;base64," + store.photo4SRC;
+	document.getElementById("image5").src = "data:image/jpeg;base64," + store.photo5SRC;
+	document.getElementById("image6").src = "data:image/jpeg;base64," + store.photo6SRC;
 }
 
 
@@ -30,47 +30,36 @@ function onDeviceReady() {
 
 }
 
-
-
-
-
-
-
-
 function onPhotoDataSuccess1(imageData) {
 	store.write('photo1SRC', imageData);
 	document.getElementById("image1").src = "data:image/jpeg;base64," + imageData;
 }
 
 
-function onPhotoDataSuccess2(imageURI) {
-	store.write('photo2', imageURI);
-	document.getElementById("image2").src = store.photo2
+function onPhotoDataSuccess2(imageData) {
+	store.write('photo2SRC', imageData);
+	document.getElementById("image2").src = "data:image/jpeg;base64," + imageData;
 }
 
-function onPhotoDataSuccess3(imageURI) {
-	store.write('photo3', imageURI);
-	document.getElementById("image3").src = store.photo3
+function onPhotoDataSuccess3(imageData) {
+	store.write('photo3SRC', imageData);
+	document.getElementById("image3").src = "data:image/jpeg;base64," + imageData;
 }
 
-function onPhotoDataSuccess4(imageURI) {
-	store.write('photo4', imageURI);
-	document.getElementById("image4").src = store.photo4
+function onPhotoDataSuccess4(imageData) {
+	store.write('photo4SRC', imageData);
+	document.getElementById("image4").src = "data:image/jpeg;base64," + imageData;
 }
 
-function onPhotoDataSuccess5(imageURI) {
-	store.write('photo5', imageURI);
-	document.getElementById("image5").src = store.photo5
+function onPhotoDataSuccess5(imageData) {
+	store.write('photo5SRC', imageData);
+	document.getElementById("image5").src = "data:image/jpeg;base64," + imageData;
 }
 
-function onPhotoDataSuccess6(imageURI) {
-	store.write('photo6', imageURI);
-	document.getElementById("image6").src = store.photo6
+function onPhotoDataSuccess6(imageData) {
+	store.write('photo6SRC', imageData);
+	document.getElementById("image6").src = "data:image/jpeg;base64," + imageData;
 }
-
-
-
-
 
 // Called when a photo is successfully retrieved
 //
@@ -85,8 +74,8 @@ function capturePhoto1() {
 	navigator.camera.getPicture(onPhotoDataSuccess1, onFail, {
 	quality: 40,
 	encodingType : Camera.EncodingType.JPEG,
-	targetWidth: 200,
-	targetHeight: 200,
+	targetWidth: 100,
+	targetHeight: 100,
 	destinationType: destinationType.DATA_URL,
 	saveToPhotoAlbum: false,
 	correctOrientation: true
@@ -96,55 +85,56 @@ function capturePhoto1() {
 
 function capturePhoto2() {
 	navigator.camera.getPicture(onPhotoDataSuccess2, onFail, {
-	quality: 50,
-	targetWidth: 600,
-	targetHeight: 600,
-	destinationType: destinationType.FILE_URI,
-	saveToPhotoAlbum: true,
+	quality: 40,
+	encodingType : Camera.EncodingType.JPEG,
+	targetWidth: 100,
+	targetHeight: 100,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
 	correctOrientation: true
 	});
 }
 
 function capturePhoto3() {
 	navigator.camera.getPicture(onPhotoDataSuccess3, onFail, {
-	quality: 50,
-	targetWidth: 600,
-	targetHeight: 600,
-	destinationType: destinationType.FILE_URI,
-	saveToPhotoAlbum: true,
+	quality: 40,
+	targetWidth: 100,
+	targetHeight: 100,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
 	correctOrientation: true
 	});
 }
 
 function capturePhoto4() {
 	navigator.camera.getPicture(onPhotoDataSuccess4, onFail, {
-	quality: 50,
-	targetWidth: 600,
-	targetHeight: 600,
-	destinationType: destinationType.FILE_URI,
-	saveToPhotoAlbum: true,
+	quality: 40,
+	targetWidth: 100,
+	targetHeight: 100,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
 	correctOrientation: true
 	});
 }
 
 function capturePhoto5() {
 	navigator.camera.getPicture(onPhotoDataSuccess5, onFail, {
-	quality: 50,
-	targetWidth: 600,
-	targetHeight: 600,
-	destinationType: destinationType.FILE_URI,
-	saveToPhotoAlbum: true,
+	quality: 40,
+	targetWidth: 100,
+	targetHeight: 100,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
 	correctOrientation: true
 	});
 }
 
 function capturePhoto6() {
 	navigator.camera.getPicture(onPhotoDataSuccess6, onFail, {
-	quality: 50,
-	targetWidth: 600,
-	targetHeight: 600,
-	destinationType: destinationType.FILE_URI,
-	saveToPhotoAlbum: true,
+	quality: 40,
+	targetWidth: 100,
+	targetHeight: 100,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
 	correctOrientation: true
 	});
 }
