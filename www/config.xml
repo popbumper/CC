@@ -27,7 +27,7 @@
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 	<gap:plugin name="com.ionic.keyboard"/>
 	<gap:plugin name="com.cordova.plugins.sms" version="0.1.1" />
-	<gap:plugin name="com.adobe.plugins.gaplugin" />
+
 	
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
@@ -75,4 +75,6 @@
         <feature name="Device">
             <param name="ios-package" value="CDVDevice" />
 </feature>
+
+
 </widget>

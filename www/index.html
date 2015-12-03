@@ -16,6 +16,12 @@
 	};
 
     </script>
+ <script type="text/javascript" src="js/libs/GALocalStorage.js"></script>
+ <script>
+     ga_storage._setAccount('UA-71012021-1'); //Replace with your own
+     ga_storage._trackPageview('/index.html');
+
+</script>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
@@ -114,16 +120,6 @@ function create_iframe(url){
             app.initialize();
             var viewportScale = 1.0 / window.devicePixelRatio;
 			$("#viewport").attr("content","user-scalable=no, initial-scale="+viewportScale+", minimum-scale=1, maximum-scale=1.0, width=device-width, height=device-height");
-
-
-
-			var gaPlugin;
-
-			function onDeviceReady() {
-				gaPlugin = window.plugins.gaPlugin;
-				gaPlugin.init(successHandler, errorHandler, "UA-71012021-1", 10);
-			}
-
         </script>
     </body>
 </html>
