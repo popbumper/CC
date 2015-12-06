@@ -1,0 +1,73 @@
+<script>
+var store = Rhaboo.persistent('policy');
+var uname = store.Name;
+var uphone = store.phone;
+var upostcode = store.postcode;
+var uemail = store.email;
+var uunitType = store.unitType;
+var uinsurer = store.insurer;
+var upolicyNumber = store.policyNumber;
+var urenewalDate = store.renewalDate;
+var umake = store.make;
+var umodel = store.model;
+var uvin = store.vin;
+var photo1SRC = store.photo1SRC;
+var photo2SRC = store.photo2SRC;
+var photo3SRC = store.photo3SRC;
+var photo4SRC = store.photo4SRC;
+var photo5SRC = store.photo5SRC;
+var photo6SRC = store.photo6SRC;
+
+//Claim fields
+var theftincidentDate = store.theftincidentDate;
+var theftclaimlocation = store.theftclaimlocation;
+var theftincidentDetails = store.theftincidentDetails;
+var theftclaimphoto1SRC = store.theftclaimphoto1SRC;
+var theftclaimphoto2SRC = store.theftclaimphoto2SRC;
+
+$.ajax({
+	type:"POST",
+	url: "http://www.popbumper.co.uk/theft.php",
+	//url: "http://clubcare.hyperlogic.uk/mailtest.php",
+	contentType: "application/x-www-form-urlencoded",
+	cache: false,
+	data : ({
+	uname:uname,
+	uphone:uphone,
+	upostcode:upostcode,
+	uemail:uemail,
+	uunitType:uunitType,
+	uinsurer:uinsurer,
+	upolicyNumber:upolicyNumber,
+	urenewalDate:urenewalDate,
+	umake:umake,
+	umodel:umodel,
+	uvin:uvin,
+	photo1SRC:photo1SRC,
+	photo2SRC:photo2SRC,
+	photo3SRC:photo3SRC,
+	photo4SRC:photo4SRC,
+	photo5SRC:photo5SRC,
+	photo6SRC:photo6SRC,
+
+//theft fields
+	theftincidentDate:theftincidentDate,
+	theftclaimlocation:theftclaimlocation,
+	theftincidentDetails:theftincidentDetails,
+	theftclaimphoto1SRC:theftclaimphoto1SRC,
+	theftclaimphoto2SRC:theftclaimphoto2SRC
+
+}),
+success: function(){
+	//alert(data);
+	window.location = '#/policy';
+},
+error :function(){
+	//alert("nope :( ");
+},
+complete : function(){
+	//alert("Thank you for your registration you will receive the email with further information soon");
+	//window.location=’index.html#waiting';
+}
+});
+</script>

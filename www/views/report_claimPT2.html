@@ -1,0 +1,58 @@
+<script>
+var store = Rhaboo.persistent('policy');
+
+function saveClaimDetails(){
+	var incidentDate = document.getElementById("incidentDate").value;
+	var claimlocation = document.getElementById("claimlocation").value;
+	var incidentDetails = document.getElementById("incidentDetails").value;
+
+	store.write('incidentDate', incidentDate);
+	store.write('claimlocation', claimlocation);
+	store.write('incidentDetails', incidentDetails);
+
+    window.location = '#/reportclaimPT3';
+
+}
+
+if(store.incidentDate != undefined){
+	document.getElementById("incidentDate").value = store.incidentDate
+}
+if(store.claimlocation != undefined){
+	document.getElementById("claimlocation").value = store.claimlocation
+}
+if(store.incidentDetails != undefined){
+	document.getElementById("incidentDetails").value = store.incidentDetails
+}
+</script>
+
+
+
+<div class="homeContent">
+<img class="homelogo_test" src="img/mainLogo.png" />
+
+<div class="pageTitle" style="margin-top:8px;"><img src="img/defaqto.png" /></div>
+<div style="clear: both;"></div>
+<div class="pageBanner">Step 2: Claim Details</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+<form id="step1">
+      <p>Date of incident
+        <input name="incidentDate" type="date" class="feedback-input"  id="incidentDate" placeholder="Incident Date" />
+      </p>
+
+      <p>Location
+        <input name="claimlocation" type="text" class="feedback-input" placeholder="Incident Location" id="claimlocation" />
+      </p>
+
+      <p>Incident details
+        <textarea name="incidentDetails"  style="font-size:11pt;" class="feedback-input" placeholder="Incident Details" id="incidentDetails" /></textarea>
+      </p>
+
+    <button class="btn btn-success" style="width:100%;" onclick="saveClaimDetails()"  value="Save" id="Save" data-theme="a">CONTINUE</button>
+</form>
+
+
+</div>
+<div style="clear: both; min-height:150px;"></div>
+</div>

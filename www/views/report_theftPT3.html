@@ -1,0 +1,133 @@
+<script>
+var store = Rhaboo.persistent('policy');
+function saveTheftClaim(){
+
+	window.location = '#/sendtheftClaim';
+
+}
+
+if(store.theftclaimphoto1SRC != undefined){
+    document.getElementById("image1").src = "data:image/jpeg;base64," + store.theftclaimphoto1SRC;
+}
+
+if(store.theftclaimphoto2SRC != undefined){
+	document.getElementById("image2").src = "data:image/jpeg;base64," + store.theftclaimphoto2SRC;
+}
+
+
+
+var pictureSource; // picture source
+var destinationType; // sets the format of returned value
+var capturedPhoto = 0;
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+
+function onDeviceReady() {
+	pictureSource = navigator.camera.PictureSourceType;
+	destinationType = navigator.camera.DestinationType;
+
+}
+
+function onPhotoDataSuccess1(imageData) {
+	store.write('theftclaimphoto1SRC', imageData);
+	document.getElementById("image1").src = "data:image/jpeg;base64," + imageData;
+}
+
+
+function onPhotoDataSuccess2(imageData) {
+	store.write('theftclaimphoto2SRC', imageData);
+	document.getElementById("image2").src = "data:image/jpeg;base64," + imageData;
+}
+
+
+// Called when a photo is successfully retrieved
+//
+function onPhotoURISuccess(imageURI) {
+	console.log(imageURI);
+	var galleryImage = document.getElementById('image');
+	galleryImage.style.display = 'block';
+	galleryImage.src = imageURI;
+}
+
+function capturePhoto1() {
+	navigator.camera.getPicture(onPhotoDataSuccess1, onFail, {
+	quality: 40,
+	encodingType : Camera.EncodingType.JPEG,
+	targetWidth: 100,
+	targetHeight: 100,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
+	correctOrientation: true
+	});
+}
+
+
+function capturePhoto2() {
+	navigator.camera.getPicture(onPhotoDataSuccess2, onFail, {
+	quality: 40,
+	encodingType : Camera.EncodingType.JPEG,
+	targetWidth: 100,
+	targetHeight: 100,
+	destinationType: destinationType.DATA_URL,
+	saveToPhotoAlbum: false,
+	correctOrientation: true
+	});
+}
+
+
+function getPhoto(source) {
+// Retrieve image file location from specified source
+	navigator.camera.getPicture(onPhotoURISuccess, onFail, {
+	quality: 50,
+	targetWidth: 600,
+	targetHeight: 600,
+	destinationType: destinationType.FILE_URI,
+	sourceType: source,
+	correctOrientation: true
+	});
+}
+
+function onFail(message) {
+//alert('Failed because: ' + message);
+}
+
+
+
+
+
+</script>
+
+
+
+
+<div class="homeContent">
+<img class="homelogo_test" src="img/mainLogo.png" />
+<div class="pageTitle" style="margin-top:8px;"><img src="img/defaqto.png" /></div>
+<div style="clear: both;"></div>
+<div class="pageBanner">Step 3: Complete Claim</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+<form id="step3">
+
+<div class="boxer">
+	<div class="box-row">
+		<div class="box"><img id="image1" src="" style="width:30%;" onclick="capturePhoto1();"><br><button class="btn btn-warning" style="width:85%;" onclick="capturePhoto1();">Photo 1</button></div>
+		<div class="box"><img id="image2" src="" style="width:30%;" onclick="capturePhoto2();"><br><button class="btn btn-warning"  style="width:85%;" onclick="capturePhoto2();">Photo 2</button></div>
+	</div>
+</div>
+
+
+
+
+
+    <button class="btn btn-success" style="width:100%;" onclick="saveTheftClaim()" value="Save" id="Continue" data-theme="a">Finish</button>
+
+  </div>
+</form>
+
+
+</div>
+
+</div>

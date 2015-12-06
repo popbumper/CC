@@ -76,6 +76,34 @@ clubCare.config(['$routeProvider',
       when('/claim2', {
         templateUrl: 'views/claimPT2.html'
       }).
+      when('/reportclaim', {
+        templateUrl: 'views/report_claim.html'
+      }).
+      when('/reportclaimPT2', {
+        templateUrl: 'views/report_claimPT2.html'
+      }).
+       when('/reportclaimPT3', {
+        templateUrl: 'views/report_claimPT3.html'
+      }).
+       when('/sendClaim', {
+        templateUrl: 'views/sendClaim.html'
+      }).
+
+
+      when('/reporttheft', {
+        templateUrl: 'views/report_theft.html'
+      }).
+      when('/reporttheftPT2', {
+        templateUrl: 'views/report_theftPT2.html'
+      }).
+      when('/reporttheftPT3', {
+        templateUrl: 'views/report_theftPT3.html'
+      }).
+       when('/sendtheftClaim', {
+        templateUrl: 'views/sendtheftClaim.html'
+      }).
+
+
       when('/contact', {
         templateUrl: 'views/contact.html'
       }).

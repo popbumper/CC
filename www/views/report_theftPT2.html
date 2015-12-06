@@ -1,0 +1,58 @@
+<script>
+var store = Rhaboo.persistent('policy');
+
+function saveClaimDetails(){
+	var theftincidentDate = document.getElementById("theftincidentDate").value;
+	var theftclaimlocation = document.getElementById("theftclaimlocation").value;
+	var theftincidentDetails = document.getElementById("theftincidentDetails").value;
+
+	store.write('theftincidentDate', theftincidentDate);
+	store.write('theftclaimlocation', theftclaimlocation);
+	store.write('theftincidentDetails', theftincidentDetails);
+
+    window.location = '#/reporttheftPT3';
+
+}
+
+if(store.theftincidentDate != undefined){
+	document.getElementById("theftincidentDate").value = store.theftincidentDate
+}
+if(store.theftclaimlocation != undefined){
+	document.getElementById("theftclaimlocation").value = store.theftclaimlocation
+}
+if(store.theftincidentDetails != undefined){
+	document.getElementById("theftincidentDetails").value = store.theftincidentDetails
+}
+</script>
+
+
+
+<div class="homeContent">
+<img class="homelogo_test" src="img/mainLogo.png" />
+
+<div class="pageTitle" style="margin-top:8px;"><img src="img/defaqto.png" /></div>
+<div style="clear: both;"></div>
+<div class="pageBanner">Step 2: Theft Details</div>
+<div style="clear: both;"></div>
+<div class="pageBlock">
+
+<form id="step1">
+      <p>Date of incident
+        <input name="theftincidentDate" type="date" class="feedback-input"  id="theftincidentDate" placeholder="Incident Date" />
+      </p>
+
+      <p>Location
+        <input name="theftclaimlocation" type="text" class="feedback-input" placeholder="Incident Location" id="theftclaimlocation" />
+      </p>
+
+      <p>Incident details
+        <textarea name="theftincidentDetails"  style="font-size:11pt;" class="feedback-input" placeholder="Incident Details" id="theftincidentDetails" /></textarea>
+      </p>
+
+    <button class="btn btn-success" style="width:100%;" onclick="saveClaimDetails()"  value="Save" id="Save" data-theme="a">CONTINUE</button>
+</form>
+
+
+</div>
+<div style="clear: both; min-height:150px;"></div>
+</div>
