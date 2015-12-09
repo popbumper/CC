@@ -44,7 +44,8 @@ footer ul#menu {
 	overflow: auto;
 	padding: 0;
 	margin:0;
-
+	//border-style: solid;
+    	border-top: thick solid #014f97;
 }
 footer ul#menu > li.tab-button {
 	display: block;

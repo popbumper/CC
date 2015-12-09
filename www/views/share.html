@@ -1,22 +1,28 @@
 <script>
+
+function getPlatform(){
+	var platform = '' + device.platform;
+
+	switch(platform){
+		case 'Android':
+		var message = "Check out the Club Care Insurance app for all your policy needs: http://googleplaysiteblahblahapplinkhere";
+		break;
+
+		case 'iOS':
+		var message = "Check out the Club Care Insurance app for all your policy needs: http://applestoreblahblahapplinkhere";
+		break;
+	}
+	return message;
+}
+
  function sendSms() {
         var number = document.getElementById('numberTxt').value;
         //var message = document.getElementById('messageTxt').value;
         //alert(number);
-        //alert(message);
-		var platform = '' + device.platform;
 
-		alert(platform);
 
-		switch(platform){
-			case 'Android':
-			var message = "Check out the Club Care Insurance app for all your policy needs: http://googleplaysiteblahblahapplinkhere";
-			break;
-
-			case 'iOS':
-			var message = "Check out the Club Care Insurance app for all your policy needs: http://applestoreblahblahapplinkhere";
-			break;
-		}
+        var message = getPlatform();
+        alert(message);
 
  		//CONFIGURATION
         var options = {
@@ -51,6 +57,7 @@
 <br>
 <center>
 	<button class="btn btn-success" style="width:50%; margin-top:10px;" onclick="sendSms()">Send SMS</button>
+	<button onclick="window.plugins.socialsharing.shareViaTwitter('hello')">Share on Twitter</button>
 </center>
 
 

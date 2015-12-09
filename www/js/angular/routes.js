@@ -64,6 +64,9 @@ clubCare.config(['$routeProvider',
        when('/productshome', {
         templateUrl: 'views/products_home.html'
       }).
+        when('/productsmobility', {
+        templateUrl: 'views/products_mobility.html'
+      }).
        when('/productscamping', {
         templateUrl: 'views/products_camping.html'
       }).
@@ -109,6 +112,37 @@ clubCare.config(['$routeProvider',
       }).
       when('/more', {
         templateUrl: 'views/more.html'
+      }).
+      when('/morecontact', {
+        templateUrl: 'views/more_contact.html'
+      }).
+      when('/moreccwww', {
+        templateUrl: 'views/more_ccwww.html'
+      }).
+      when('/moresocial', {
+        templateUrl: 'views/more_social.html'
+      }).
+
+      when('/moremost', {
+        templateUrl: 'views/more_most.html'
+      }).
+      when('/morecccwww', {
+        templateUrl: 'views/more_cccwww.html'
+      }).
+      when('/moreDVLA', {
+        templateUrl: 'views/more_DVLA.html'
+      }).
+      when('/moreMID', {
+        templateUrl: 'views/more_MID.html'
+      }).
+      when('/moreproddocs', {
+        templateUrl: 'views/more_proddocs.html'
+      }).
+      when('/moreprivacy', {
+        templateUrl: 'views/more_privacy.html'
+      }).
+      when('/moreterms', {
+        templateUrl: 'views/more_terms.html'
       }).
       when('/share', {
         templateUrl: 'views/share.html'
