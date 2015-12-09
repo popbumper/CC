@@ -19,6 +19,24 @@ if(store.firstName != undefined){
 	document.getElementById("model").value = store.model
 	document.getElementById("vin").value = store.vin
 }
+
+
+
+
+function scanCode(){
+		cordova.plugins.barcodeScanner.scan(
+		  function (result) {
+			  alert("We got a barcode\n" +
+					"Result: " + result.text + "\n" +
+					"Format: " + result.format + "\n" +
+					"Cancelled: " + result.cancelled);
+		  },
+		  function (error) {
+			  alert("Scanning failed: " + error);
+		  }
+	   );
+	}
+
 </script>
 
 
@@ -41,7 +59,7 @@ if(store.firstName != undefined){
 	 <input name="model" type="text" class="feedback-input" placeholder="Model" id="model" />
 	</p>
 	<p>CRiS / VIN number
-	 <input name="vin" type="text" class="feedback-input" placeholder="VIN" id="vin" />
+	 <input name="vin" type="text" class="feedback-input" placeholder="VIN" id="vin" /> <button id="scan" class="btn btn-warning" style="width:85%;" onclick="scanCode();">SCAN</button>
 	</p>
 
     <button class="btn btn-success" style="width:100%;" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">CONTINUE</button>

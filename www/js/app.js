@@ -21,7 +21,7 @@ var clubCare = angular.module('clubCare', ['ngRoute','ui.bootstrap']);
 var app = {
     // Application Constructor
     initialize: function() {
-
+		document.addEventListener('deviceready', this.onDeviceReady, false);
         console.log("initializing");
         console.log("initializing done");
     }
