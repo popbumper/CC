@@ -21,12 +21,18 @@ if(store.firstName != undefined){
 }
 
 
-
-
 function scanCode(){
 		cordova.plugins.barcodeScanner.scan(
 		  function (result) {
- 			document.getElementById("vin").value = result.text
+		  var CRISURL = result.text
+
+
+
+		  CRISURL = CRISURL.replace(/^https?:\/\/www.cris.co.uk\/secure\/qr\//,'')
+
+
+
+ 			document.getElementById("vin").value = CRISURL
 		  },
 		  function (error) {
 			  //alert("Scanning failed: " + error);
@@ -56,7 +62,7 @@ function scanCode(){
 	 <input name="model" type="text" class="feedback-input" placeholder="Model" id="model" />
 	</p>
 	<p>CRiS / VIN number
-	 <input name="vin" type="text" class="feedback-input" placeholder="VIN" id="vin" /> <button id="scan" class="btn btn-warning" style="width:85%;" onclick="scanCode();">SCAN</button>
+	 <input name="vin" type="text" class="feedback-input" placeholder="VIN" id="vin" size="200" /> <button id="scan" class="btn btn-warning" style="width:35%;" onclick="scanCode();">SCAN VIN</button>
 	</p>
 
     <button class="btn btn-success" style="width:100%;" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">CONTINUE</button>
