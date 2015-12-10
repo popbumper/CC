@@ -29,8 +29,8 @@ function saveClaim(){
 
 	$.ajax({
 		type:"POST",
-		url: "http://www.popbumper.co.uk/claim.php",
-		//url: "http://clubcare.hyperlogic.uk/claim.php",
+		//url: "http://www.popbumper.co.uk/claim.php",
+		url: "http://clubcare.hyperlogic.uk/claim.php",
 		contentType: "application/x-www-form-urlencoded",
 		cache: false,
 		data : ({
@@ -62,7 +62,7 @@ function saveClaim(){
 	}),
 	success: function(){
 		//alert(data);
-		window.location = '#/policy';
+		window.location = '#/sendPolicy';
 	},
 	error :function(){
 		//alert("nope :( ");
@@ -169,7 +169,7 @@ function onFail(message) {
 
 <div class="homeContent">
 <img class="homelogo_test" src="img/mainLogo.png" />
-<div class="pageTitle" style="margin-top:8px;"><img src="img/defaqto.png" /></div>
+<div class="pageTitle" style="margin-top:8px;"><img src="img/defaqto.png" width="100px" /></div>
 <div style="clear: both;"></div>
 <div class="pageBanner">Step 3: Complete Claim</div>
 <div style="clear: both;"></div>
