@@ -19,6 +19,14 @@ function getPlatform(){
 	return message;
 }
 
+
+function shareTwitter(){
+	var message = getPlatform();
+	window.plugins.socialsharing.shareViaTwitter(message)
+
+}
+
+
  function sendSms() {
         var number = document.getElementById('numberTxt').value;
         //var message = document.getElementById('messageTxt').value;
@@ -60,8 +68,8 @@ function getPlatform(){
 <input class="feedback-input" id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
 <br>
 <center>
-	<button class="btn btn-success" style="width:50%; margin-top:10px;" onclick="sendSms()">Send SMS</button>
-		<button onclick="window.plugins.socialsharing.shareViaTwitter(getPlatform())">Share on Twitter</button>
+	<button class="btn btn-success" style="width:50%; margin-top:10px;" onclick="sendSms()">Send SMS</button><br>
+		<button class="btn btn-success" onclick="shareTwitter()">Share on Twitter</button>
 </center>
 
 
