@@ -22,7 +22,8 @@ function getPlatform(){
 
 function shareTwitter(){
 	var message = getPlatform();
-	window.plugins.socialsharing.shareViaTwitter(message)
+	//alert(message);
+	window.plugins.socialsharing.share(message);
 
 }
 
@@ -68,8 +69,9 @@ function shareTwitter(){
 <input class="feedback-input" id="numberTxt" placeholder="Enter mobile number" value="" type="tel" />
 <br>
 <center>
-	<button class="btn btn-success" style="width:50%; margin-top:10px;" onclick="sendSms()">Send SMS</button><br>
-		<button class="btn btn-success" onclick="shareTwitter()">Share on Twitter</button>
+	<button class="btn btn-success" style="width:50%; margin-top:10px;" onclick="sendSms()">Share by SMS</button><br>
+		<button class="btn btn-success" onclick="shareTwitter()">Share on Twitter or Facebook</button>
+
 </center>
 
 
