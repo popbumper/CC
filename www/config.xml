@@ -26,7 +26,7 @@
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer"/>
 	<gap:plugin name="cordova-plugin-whitelist" source="npm"/>
 	<gap:plugin name="com.ionic.keyboard"/>
-	<gap:plugin name="com.cordova.plugins.sms" version="0.1.1" />
+	<gap:plugin name="com.cordova.plugins.sms"  />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	
 	
@@ -78,6 +78,19 @@
 	</feature>
 <feature name="BarcodeScanner">
     <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+</feature>
+
+<!-- for iOS -->
+<feature name="SocialSharing">
+  <param name="ios-package" value="SocialSharing" />
+</feature>
+<!-- for Android -->
+<feature name="SocialSharing">
+  <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
+</feature>
+<!-- for Windows Phone -->
+<feature name="SocialSharing">
+  <param name="wp-package" value="SocialSharing"/>
 </feature>
 
 </widget>
