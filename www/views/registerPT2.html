@@ -16,7 +16,7 @@ function savePolicyDetails(){
 
 }
 
-if(store.Name != undefined){
+
 
 	if(store.insurer == 'Ageas'){
 		document.getElementById("Ageas").selected = true;
@@ -28,9 +28,12 @@ if(store.Name != undefined){
 
 
 	document.getElementById("unitType").value = store.unitType
+
+if(store.policyNumber != undefined){
 	document.getElementById("policyNumber").value = store.policyNumber
-	document.getElementById("renewalDate").value = store.renewalDate
 }
+	document.getElementById("renewalDate").value = store.renewalDate
+
 </script>
 
 
