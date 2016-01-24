@@ -14,7 +14,7 @@ function savePolicyDetails(){
 
 }
 
-if(store.firstName != undefined){
+if(store.make != undefined){
 	document.getElementById("make").value = store.make
 	document.getElementById("model").value = store.model
 	document.getElementById("vin").value = store.vin
@@ -62,15 +62,16 @@ function scanCode(){
 	 <input name="model" type="text" class="feedback-input" placeholder="Model" id="model" />
 	</p>
 	<p>CRiS / VIN number
-	 <input name="vin" type="text" class="feedback-input" placeholder="VIN" id="vin" size="200" /> <button id="scan" class="btn btn-warning" style="width:45%; float:right;" onclick="scanCode();">SCAN VIN CHIP</button>
+	 <input name="vin" type="text" class="feedback-input" placeholder="VIN" id="vin" size="200" /> <button id="scan" class="btn btn-warning" style="width:45%; float:right;" onclick="scanCode();">SCAN VIN CHIP</button><div style="clear: both;"></div>
 	</p>
 
     <button class="btn btn-success" style="width:100%;" onclick="savePolicyDetails()" value="Save" id="Continue" data-theme="a">CONTINUE</button>
 
   </div>
+
 </form>
 
 
 </div>
-
+<div style="clear: both; min-height:150px;"></div>
 </div>
