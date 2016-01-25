@@ -108,9 +108,9 @@ function onPhotoURISuccess(imageURI) {
 
 function capturePhoto1() {
 	navigator.camera.getPicture(onPhotoDataSuccess1, onFail, {
-	quality: 80,
+	quality: 75,
 	encodingType : Camera.EncodingType.JPEG,
-	targetWidth: 400,
+	targetWidth: 300,
 	//targetHeight: 200,
 	destinationType: destinationType.DATA_URL,
 	saveToPhotoAlbum: false,
