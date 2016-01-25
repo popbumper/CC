@@ -132,9 +132,9 @@ function onPhotoURISuccess(imageURI) {
 
 function capturePhoto1() {
 	navigator.camera.getPicture(onPhotoDataSuccess1, onFail, {
-	quality: 100,
+	quality: 50,
 	encodingType : Camera.EncodingType.JPEG,
-	targetWidth: 400,
+	targetWidth: 300,
 	//targetHeight: 300,
 	destinationType: destinationType.DATA_URL,
 	saveToPhotoAlbum: false,
@@ -145,9 +145,9 @@ function capturePhoto1() {
 
 function capturePhoto2() {
 	navigator.camera.getPicture(onPhotoDataSuccess2, onFail, {
-	quality: 100,
+	quality: 50,
 	encodingType : Camera.EncodingType.JPEG,
-	targetWidth: 400,
+	targetWidth: 300,
 	//targetHeight: 300,
 	destinationType: destinationType.DATA_URL,
 	saveToPhotoAlbum: false,
