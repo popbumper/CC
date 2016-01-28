@@ -33,7 +33,7 @@
 	<gap:plugin name="org.apache.cordova.console" /> <!-- required -->
 	<gap:plugin name="org.apache.cordova.geolocation" /> <!-- needed only if you use geolocalization -->
 	<gap:plugin name="org.apache.cordova.dialogs" /> <!-- required -->
-	<gap:plugin name="com.phonegap.plugins.puship" source="plugins.cordova.io" /> <!-- required -->
+	<gap:plugin name="phonegap-plugin-pushipc" source="pgb" /> <!-- required -->
 	<!-- push update end -->
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
