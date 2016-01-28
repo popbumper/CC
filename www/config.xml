@@ -30,10 +30,7 @@
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	
 	<!-- push update -->
-	<gap:plugin name="org.apache.cordova.console" /> <!-- required -->
-	<gap:plugin name="org.apache.cordova.geolocation" /> <!-- needed only if you use geolocalization -->
-	<gap:plugin name="org.apache.cordova.dialogs" /> <!-- required -->
-	<gap:plugin name="phonegap-plugin-pushipc" source="pgb" /> <!-- required -->
+	<gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
 	<!-- push update end -->
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
@@ -55,6 +52,7 @@
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#004238" />	
 	<preference name="android-windowSoftInputMode" value="adjustResize" />
+	<preference name="android-build-tool" value="gradle" />
 	
 	<icon src="icon.png" />
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
@@ -100,7 +98,7 @@
 
 
 <access origin="*" />
-
+<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
 
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
