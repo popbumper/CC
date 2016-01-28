@@ -25,7 +25,53 @@ var app = {
 
         console.log("initializing");
         console.log("initializing done");
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+
+		var Puship = window.plugins.puship;
+		Puship.EnableLog = true;
+		Puship.PushipAppId = Y1vJJkgR9m61W4q; // I.E.: puship_id = "h1mCVGaP9dtGnwG"
+
+		if (Puship.Common.GetCurrentOs()==Puship.OS.ANDROID){
+			var GCMCode = 102955784975; // This is the senderID provided by Google. I.E.: "28654934133"
+			Puship.GCM.Register(GCMCode,
+			{
+				successCallback: function (pushipresult){
+					navigator.notification.alert("device registered with DeviceId:" + pushipresult.DeviceId);
+				},
+				failCallback: function (pushipresult){
+					navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
+				}
+			});
+		} else if (Puship.Common.GetCurrentOs()==Puship.OS.IOS){
+			Puship.APNS.Register(
+			{
+				successCallback: function (pushipresult){
+					navigator.notification.alert("device registered with DeviceId:" + pushipresult.DeviceId);
+				},
+				failCallback: function (pushipresult){
+					navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
+				}
+			});
+		} else if (Puship.Common.GetCurrentOs()==Puship.OS.WP){
+			Puship.WP.Register(
+			{
+				successCallback: function (pushipresult){
+					navigator.notification.alert("device registered with DeviceId:" + pushipresult.DeviceId);
+				},
+				failCallback: function (pushipresult){
+					navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
+				}
+			});
+		} else {
+			Console.log("Not supported platform");
+		}
+
     }
 };
+
+
+
 
 

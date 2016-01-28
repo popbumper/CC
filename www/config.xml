@@ -3,7 +3,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "ClubCareApp"
         versionCode = "10" 
-        version     = "1.7.1" >
+        version     = "1.8.0" >
 
     <!-- versionCode is optional and Android only -->
 
@@ -29,7 +29,12 @@
 	<gap:plugin name="com.cordova.plugins.sms"  />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	
-	
+	<!-- push update -->
+	<gap:plugin name="org.apache.cordova.console" /> <!-- required -->
+	<gap:plugin name="org.apache.cordova.geolocation" /> <!-- needed only if you use geolocalization -->
+	<gap:plugin name="org.apache.cordova.dialogs" /> <!-- required -->
+	<gap:plugin name="com.phonegap.plugins.puship" source="plugins.cordova.io" /> <!-- required -->
+	<!-- push update end -->
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
 	
@@ -95,6 +100,8 @@
 
 
 <access origin="*" />
+
+
     <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
     <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
    
