@@ -4,6 +4,9 @@
   <supports-screens android:anydensity="true" android:largescreens="true" android:normalscreens="true" android:resizeable="true" android:smallscreens="true">
     </supports-screens>
  
+
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />	
     <uses-permission android:name="android.permission.CAMERA">
     <uses-permission android:name="android.permission.VIBRATE">
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION">
