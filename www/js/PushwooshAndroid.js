@@ -48,13 +48,13 @@ function registerPushwooshAndroid() {
 	pushNotification.registerDevice(
 		function(token)
 		{
-			alert(token);
+			//alert(token);
 			//callback when pushwoosh is ready
 			onPushwooshAndroidInitialized(token);
 		},
 		function(status)
 		{
-			alert("failed to register: " +  status);
+			//alert("failed to register: " +  status);
 		    console.warn(JSON.stringify(['failed to register ', status]));
 		}
 	);
