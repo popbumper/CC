@@ -29,17 +29,17 @@ function registerPushwooshIOS() {
 
 			//display alert to the user for example
 			alert(notification.aps.alert);
-			
+
 			//to view full push payload
 			//alert(JSON.stringify(notification));
-			
+
 			//clear the app badge
 			pushNotification.setApplicationIconBadgeNumber(0);
 		}
 	);
 
 	//initialize the plugin
-    pushNotification.onDeviceReady({pw_appid:"539E9-AB8AE"});
+    pushNotification.onDeviceReady({pw_appid:"FC8B2-D0519"});
 
 	//register for pushes
 	pushNotification.registerDevice(
@@ -55,7 +55,7 @@ function registerPushwooshIOS() {
 			//alert(JSON.stringify(['failed to register ', status]));
 		}
 	);
-	
+
 	//reset badges on start
 	pushNotification.setApplicationIconBadgeNumber(0);
 }
@@ -73,7 +73,7 @@ function onPushwooshiOSInitialized(pushToken)
 		}
 	);
 
-	//example how to get push token at a later time 
+	//example how to get push token at a later time
 	pushNotification.getPushToken(
 		function(token)
 		{
