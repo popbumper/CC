@@ -1,6 +1,5 @@
 android {
     lintOptions {
-        disable 'MissingTranslation'
-        disable 'ExtraTranslation'
+	    abortonError false 
     }
 }
