@@ -30,7 +30,7 @@
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	
 	<!-- push update -->
-	<gap:plugin name="pushwoosh-pgb-plugin" source="npm" />
+	<gap:plugin name="pushwoosh-pgb-plugin" source="npm" version="3.6.2"/>
 	<!-- push update end -->
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
