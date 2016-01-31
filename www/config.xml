@@ -29,9 +29,7 @@
 	<gap:plugin name="com.cordova.plugins.sms"  />
 	<gap:plugin name="nl.x-services.plugins.socialsharing" />
 	
-	<!-- push update -->
-
-	<!-- push update end -->
+	<!-- <gap:plugin name="pushwoosh-pgb-plugin" source="npm" version="3.6.2"/> -->
 
 	<preference name='phonegap-version' value='cli-5.2.0' />
 	
@@ -52,7 +50,9 @@
 	<preference name="StatusBarOverlaysWebView" value="false" />
 	<preference name="StatusBarBackgroundColor" value="#004238" />	
 	<preference name="android-windowSoftInputMode" value="adjustResize" />
-	<preference name="android-build-tool" value="gradle" />
+	
+	
+	<!--<preference name="android-build-tool" value="gradle" />-->
 	
 	<icon src="icon.png" />
 	<icon src="icon.png" gap:platform="android" gap:density="xhdpi"/>
