@@ -20,7 +20,7 @@ var clubCare = angular.module('clubCare', ['ngRoute','ui.bootstrap']);
  */
 
 
-/*function initPushwoosh() {
+function initPushwoosh() {
 	var pushNotification = cordova.require("com.pushwoosh.plugins.pushwoosh.PushNotification");
 	if(device.platform == "Android")
 	{
@@ -36,7 +36,7 @@ var clubCare = angular.module('clubCare', ['ngRoute','ui.bootstrap']);
 	    registerPushwooshWP();
 	}
 }
-*/
+
 
 
 var app = {
@@ -56,7 +56,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        //initPushwoosh();
+        initPushwoosh();
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
