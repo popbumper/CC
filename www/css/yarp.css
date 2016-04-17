@@ -246,10 +246,12 @@ outline: none;
  .homelogo_test {
  float:left;
 	 //top: -10px;
-	 margin-left: 25px;
-	 width: 32vw;
+	 margin-top: 12px;
+	 margin-left: 12px;
+	 margin-right: 12px;
+	 width: 70vw;
 	 //position: relative;
-	 //padding:4px;
+	 padding-bottom:40px;
 	 
  }
 
