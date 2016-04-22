@@ -34,7 +34,7 @@ clubCare.config(['$routeProvider',
       }).
       when('/repairer', {
 		 redirectTo: function() {
-            window.location = 'www.clubcareinsurance.com/find-a-caravan-repairer';
+            window.location = 'http://www.clubcareinsurance.com/find-a-caravan-repairer';
         }
       }).
       when('/hints', {
